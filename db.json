@@ -1,0 +1,116 @@
+{
+  "users": [
+    {
+      "id": "4199935983",
+      "email": "jviccary0@foxnews.com",
+      "password": "ZL4xFX"
+    },
+    {
+      "id": "9215930817",
+      "email": "cottey1@ebay.co.uk",
+      "password": "F6tULh"
+    },
+    {
+      "id": "8528610357",
+      "email": "pkaszper2@dropbox.com",
+      "password": "IFFxxh"
+    },
+    {
+      "id": "4830051973",
+      "email": "astotherfield3@archive.org",
+      "password": "g80ihgVc"
+    },
+    {
+      "id": "0377844217",
+      "email": "icolbrun4@boston.com",
+      "password": "BoXBXIpHx"
+    },
+    {
+      "id": "8109981755",
+      "email": "nscurry5@fotki.com",
+      "password": "BzTq0dH2Y"
+    },
+    {
+      "id": "3998820868",
+      "email": "ekornilov6@newyorker.com",
+      "password": "h78vUKQ0"
+    },
+    {
+      "id": "8533372515",
+      "email": "dcoker7@sun.com",
+      "password": "AyLqN4k9XT23"
+    },
+    {
+      "id": "1047964023",
+      "email": "hgibbonson8@rediff.com",
+      "password": "OI6NdS"
+    },
+    {
+      "id": "2063362580",
+      "email": "zadin9@apache.org",
+      "password": "fAtLA7FkGH4E"
+    }
+  ],
+  "products": [
+    {
+      "id": "0163425280",
+      "productName": "Cytokinetics, Incorporated",
+      "productDescription": "Subluxation of left scapula",
+      "productPrice": "$82.53"
+    },
+    {
+      "id": "8832875187",
+      "productName": "Miller Industries, Inc.",
+      "productDescription": "Toxic effect of unspecified gases, fumes and vapors, undetermined, sequela",
+      "productPrice": "$113.48"
+    },
+    {
+      "id": "4440080227",
+      "productName": "ABM Industries Incorporated",
+      "productDescription": "Pathological fracture in neoplastic disease, unspecified humerus, initial encounter for fracture",
+      "productPrice": "$78.80"
+    },
+    {
+      "id": "1774274914",
+      "productName": "Orchid Island Capital, Inc.",
+      "productDescription": "Poisoning by unspecified drugs acting on muscles, accidental (unintentional)",
+      "productPrice": "$155.42"
+    },
+    {
+      "id": "6454704335",
+      "productName": "Computer Programs and Systems, Inc.",
+      "productDescription": "Major osseous defect, right hand",
+      "productPrice": "$134.13"
+    },
+    {
+      "id": "5797486725",
+      "productName": "Forum Merger Corporation",
+      "productDescription": "Malignant neoplasm of larynx",
+      "productPrice": "$54.30"
+    },
+    {
+      "id": "0519732669",
+      "productName": "First Trust Mega Cap AlphaDEX Fund",
+      "productDescription": "Toxic effect of copper and its compounds, undetermined",
+      "productPrice": "$83.86"
+    },
+    {
+      "id": "4657653342",
+      "productName": "Pioneer Municipal High Income Advantage Trust",
+      "productDescription": "Laceration of other extensor muscle, fascia and tendon at forearm level, unspecified arm, subsequent encounter",
+      "productPrice": "$83.52"
+    },
+    {
+      "id": "6120036725",
+      "productName": "Embotelladora Andina S.A.",
+      "productDescription": "Salter-Harris Type II physeal fracture of left calcaneus, initial encounter for closed fracture",
+      "productPrice": "$83.86"
+    },
+    {
+      "id": "6889595432",
+      "productName": "F.N.B. Corporation",
+      "productDescription": "Personal history of psychological abuse in childhood",
+      "productPrice": "$104.50"
+    }
+  ]
+}

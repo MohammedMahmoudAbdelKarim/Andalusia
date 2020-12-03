@@ -1,0 +1,16 @@
+// Theme Colors
+@import "./variables";
+
+
+// Changing Bootstrap Theme Colors
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "secondary2": $secondary2,
+  "dark": $dark,
+  "darker": $darker,
+  "gray": $gray,
+);
+
+// Bootstrap and its default variables
+@import "../node_modules/bootstrap/scss/bootstrap";

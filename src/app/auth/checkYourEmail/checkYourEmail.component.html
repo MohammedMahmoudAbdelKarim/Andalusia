@@ -1,0 +1,62 @@
+<section id="check-email" class="container wow fadeIn py-5">
+  <div class="row mb-3">
+    <div class="col-lg-4 offset-lg-4">
+      <div class="w-75 m-auto">
+        <ng-lottie width="100%" [options]="options"></ng-lottie>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-6 offset-lg-3">
+      <div class="text text-center">
+        <h3 class="theme-header mb-5">Verify Your Email</h3>
+
+        <!-- Coming from register page -->
+        <ng-container *ngIf="type === 'register'; else elseTemplate">
+          <p class="text-white mb-3">
+            Check your email & Click the link to activate your account.
+          </p>
+        </ng-container>
+
+        <!-- Coming from reset password page -->
+        <ng-template #elseTemplate>
+          <p class="text-white mb-3">
+            Check your email & Click the link to reset your password.
+          </p>
+        </ng-template>
+
+        <div class="email" *ngIf="email">
+          <p class="text-white mb-3">Your email is</p>
+          <h5 class="text-secondary2 font-weight-bold">{{ email }}</h5>
+        </div>
+
+        <!-- Backend Validation -->
+        <div
+          class="theme-error wow shake"
+          *ngIf="
+            (serverErrors$ | async)?.email &&
+            (serverErrors$ | async) as serverErrors
+          "
+        >
+          {{ serverErrors["email"] }}
+        </div>
+
+        <div class="w-50 m-auto">
+          <button
+            class="w-100 mb-4 mt-5 text-center btn btn-skew-primary font-weight-bold text-dark"
+            (click)="changeEmail()"
+          >
+            Change Email
+          </button>
+
+          <p
+            class="resend-email text-primary d-inline-block"
+            (click)="resendEmail()"
+          >
+            Resend Email
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

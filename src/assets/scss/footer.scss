@@ -1,0 +1,30 @@
+#footer {
+  display: flex;
+  align-items: center;
+  z-index: 1020;
+  border-top: 3px solid $secondary2;
+
+  hr {
+    border-color: $secondary;
+  }
+
+  ul {
+    li {
+      a,
+      svg {
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          color: $secondary !important;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 320px) and (max-width: 425px) {
+    ul {
+      text-align: center;
+    }
+  }
+}

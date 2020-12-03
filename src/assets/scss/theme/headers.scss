@@ -1,0 +1,19 @@
+.theme-underline-header {
+  font-size: calc(100% + 2vw + 1vh);
+  color: $white;
+
+  &::after {
+    content: "";
+    display: block;
+    margin: 0 auto;
+    width: calc(20% + 1vw + 1vh);
+    padding-top: 20px;
+    border-bottom: 1vw solid $secondary2;
+    transform: skewX(-25deg);
+  }
+}
+
+.theme-header {
+  font-size: calc(100% + 2vw + 0vh);
+  color: $white;
+}

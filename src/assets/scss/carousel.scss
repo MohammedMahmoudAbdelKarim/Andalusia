@@ -1,0 +1,88 @@
+#carousel {
+  .text {
+    padding: 22vw 10vw;
+
+    h2 {
+      text-shadow: 2px 2px 10px rgba($color: $darker, $alpha: 0.7);
+    }
+  }
+
+  .slide {
+    height: 900px;
+    background-image: url("./assets/imgs/Slide1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .slide1 {
+    background-image: url("./assets/imgs/Slide1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .slide2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("./assets/imgs/Slide2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    .mobiles {
+      position: relative;
+      animation: MobileAnimation 25s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+
+      &:hover {
+        animation-play-state: paused;
+      }
+    }
+  }
+  @media (min-width: 320px) and (max-width: 425px) {
+    .mobiles img {
+      width: 300%;
+    }
+  }
+  @media (min-width: 426px) and (max-width: 768px) {
+    .mobiles img {
+      width: 160%;
+    }
+  }
+
+  @media (min-width: 320px) and (max-width: 768px) {
+    .slide {
+      height: 350px;
+    }
+
+    .text {
+      padding: 13vw 6vw;
+      text-align: center;
+      width: 100%!important;
+
+      h2 {
+        text-shadow: 2px 2px 10px rgba($color: $darker, $alpha: 0.7);
+        font-size: 6vw;
+      }
+    }
+  }
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .text {
+      padding: 40vw 10vw;
+      width: 100%!important;
+    }
+  }
+
+  @keyframes MobileAnimation {
+    0% {
+      left: 100vw;
+    }
+
+    100% {
+      left: -100vw;
+    }
+  }
+}

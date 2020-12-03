@@ -1,0 +1,47 @@
+<div
+  id="order-details"
+  class="container wow fadeIn"
+  *ngIf="user$ | async as user"
+  dir="{{ direction$ | async }}"
+>
+  <!-- Order details -->
+  <div class="card bg-dark my-5 text-white" *ngIf="order">
+    <div class="card-header bg-secondary2 text-dark">
+      Order No: {{ order.id }}
+    </div>
+    <div class="card-body">
+      <div class="row border-bottom py-4">
+        <!-- Sinlge Product Details -->
+        <div class="col-12">
+          <div class="d-flex justify-content-between">
+            <p [translate]="'CART.PRODUCT_NAME'">Product Name:</p>
+            <p class="text-secondary">{{ order.promo_id }}</p>
+          </div>
+          <div class="d-flex justify-content-between">
+            <p [translate]="'CART.PRODUCT_QUANTITY'">Product Quantity:</p>
+            <p class="text-secondary">3</p>
+          </div>
+          <div class="d-flex justify-content-between" *ngIf="true">
+            <p [translate]="'CART.DISCOUNT'">Discount:</p>
+            <p class="text-secondary">30%</p>
+          </div>
+          <div class="d-flex justify-content-between">
+            <p [translate]="'CART.PRODUCT_PRICE'">Product Price:</p>
+            <p class="text-secondary">{{ +order["price_before"] }}</p>
+          </div>
+          <div class="d-flex justify-content-between">
+            <p [translate]="'CART.TOTAL_PRODUCT_PRICE'">
+              Total Products Price:
+            </p>
+            <p class="text-secondary">$100</p>
+          </div>
+        </div>
+      </div>
+      <!-- Total Amount -->
+      <div class="d-flex justify-content-between pt-4">
+        <p [translate]="'CART.TOTAL_AMOUNT'">Total Amount</p>
+        <p class="text-secondary">{{ +order.price_after }}</p>
+      </div>
+    </div>
+  </div>
+</div>

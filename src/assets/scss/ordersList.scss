@@ -1,0 +1,12 @@
+// Mobile
+@media (min-width: 320px) and (max-width: 425px) {
+  .table-container {
+    font-family: inherit;
+    width: 200vw !important;
+  }
+}
+
+// Unset Roboto Font
+.mat-table {
+  font-family: inherit;
+}

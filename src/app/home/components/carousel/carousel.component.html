@@ -1,0 +1,39 @@
+<div id="carousel" dir="{{ direction$ | async }}">
+  <carousel [isAnimated]="true">
+    <slide>
+      <div class="slide slide1 text-white">
+        <div class="text wow fadeInLeft w-75" data-wow-delay=".5s">
+          <h2 class="display-4 text-white mb-4" [translate]="'DOWNLOADAPP.DOWNLOADAPP'">
+            Download App
+          </h2>
+          <p [translate]="'DOWNLOADAPP.DOWNLOAD_DETAILS'">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi
+            maiores architecto et itaque eos cum.
+          </p>
+          <button
+            style="animation-duration: 7s;"
+            class="btn btn-skew-secondary py-4 font-weight-bold mt-3 animate__animated animate__swing animate__delay-2s animate__infinite"
+            (click)="downloadAPK()"
+          >
+            <span class="mx-trans-2" [translate]="'DOWNLOADAPP.DOWNLOADNOW'"
+              >Download Now</span
+            >
+
+            <img
+              src="assets/imgs/android-logo.svg"
+              alt="Android Logo"
+              width="11%"
+            />
+          </button>
+        </div>
+      </div>
+    </slide>
+    <slide>
+      <div class="slide slide2">
+        <div class="mobiles">
+          <img src="assets/imgs/Mobiles.png" alt="Mobile Screens" />
+        </div>
+      </div>
+    </slide>
+  </carousel>
+</div>

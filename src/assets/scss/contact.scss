@@ -1,0 +1,11 @@
+#contact {
+    min-height: 600px;
+
+    .img-container{
+        background-image: url("./assets/imgs/contact.png");
+        background-repeat: no-repeat;
+        height: 500px;
+        background-size: contain;
+        background-position: center;
+    }
+}

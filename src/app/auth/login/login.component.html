@@ -1,0 +1,86 @@
+<div id="login" class="container wow fadeIn py-5">
+  <div class="row text-center">
+    <div class="offset-lg-3 col-lg-6">
+      <img
+        src="assets/imgs/logo200.png"
+        class="img-fluid wow fadeInDown"
+        alt="logo"
+      />
+      <form [formGroup]="loginForm" (ngSubmit)="login(loginForm)" class="mt-4">
+        <!-- E-mail -->
+        <div class="form-group">
+          <input
+            type="email"
+            class="form-control theme-input"
+            formControlName="email"
+            placeholder="{{ 'FORM.EMAIL' | translate }}"
+            required
+          />
+          <!-- Frontend Validation -->
+          <div
+            class="theme-error wow shake"
+            *ngIf="showValidationError(loginForm, 'email')"
+          >
+            {{ getFormValidationMessage(loginForm, "email") }}
+          </div>
+          <!-- Backend Validation -->
+          <div
+            class="theme-error wow shake"
+            *ngIf="
+              (serverErrors$ | async)?.email &&
+              (serverErrors$ | async) as serverErrors
+            "
+          >
+            {{ serverErrors["email"] }}
+          </div>
+        </div>
+        <!-- Password -->
+        <div class="form-group">
+          <input
+            type="password"
+            class="form-control theme-input"
+            formControlName="password"
+            placeholder="{{ 'FORM.PASSWORD' | translate }}"
+            required
+          />
+          <!-- Frontend Validation -->
+          <div
+            class="theme-error wow shake"
+            *ngIf="showValidationError(loginForm, 'password')"
+          >
+            {{ getFormValidationMessage(loginForm, "password") }}
+          </div>
+          <!-- Backend Validation -->
+          <div
+            class="theme-error wow shake"
+            *ngIf="
+              (serverErrors$ | async)?.password &&
+              (serverErrors$ | async) as serverErrors
+            "
+          >
+            {{ serverErrors["password"] }}
+          </div>
+        </div>
+        <div class="register mt-4">
+          <a
+            [routerLink]="['/auth/forget-password']"
+            [translate]="'FORM.FORGET_PASSWORD'"
+            >Forgot Password?</a
+          >
+        </div>
+        <button
+          class="mt-4 btn btn-skew-primary font-weight-bold border-0 text-dark px-5 py-2"
+          [disabled]="loginForm.invalid"
+          [translate]="'FORM.LOGIN'"
+        >
+          Login
+        </button>
+        <div class="register mt-4">
+          <a routerLink="/auth/register" [translate]="'FORM.NO_ACCOUT'"
+            >Don't have an account?</a
+          >
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

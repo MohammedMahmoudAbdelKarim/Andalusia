@@ -1,0 +1,29 @@
+#cart {
+  display: flex;
+  justify-content: center;
+  min-height: 600px;
+
+  .icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    svg {
+      font-size: 10rem;
+    }
+  }
+  .order-details {
+    min-height: 200px;
+  }
+
+  .quantity {
+    font-size: 1.5rem;
+  }
+
+  @media (min-width: 320px) and (max-width: 768px) {
+    .card-body {
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,399 @@
+<div
+  id="profile"
+  class="container wow fadeIn py-5"
+  *ngIf="user$ | async as user"
+  dir="{{ direction$ | async }}"
+>
+  <!-- Profile and data row -->
+  <div class="row justify-content-center">
+    <!-- Profile Image -->
+    <div class="col-md-4 d-flex justify-content-center">
+      <!-- <div class="hovereffect"> -->
+      <!-- <img
+          [src]="
+            profileForm.controls.image.value
+              ? profileForm.controls.image.value
+              : 'assets/imgs/user.svg'
+          "
+          height="500px"
+          width="300px"
+          alt="profile"
+          class="img-fluid"
+        /> -->
+      <!-- overlay effect -->
+      <!-- <div class="overlay d-flex align-items-center">
+          <div
+            class="button-wrapper position-relative text-center my-3 mx-auto info"
+            *ngIf="!profileForm.controls.image.value"
+          > -->
+      <!-- Visible Upload Button -->
+      <!-- <span
+              class="label position-relative d-inline-block w-100 bg-primary py-2"
+              [translate]="'PROFILE.UPLOAD'"
+            >
+              Upload
+            </span>
+            <input
+              type="file"
+              name="upload"
+              id="upload"
+              class="upload-box d-inline-block position-absolute w-100"
+              placeholder="Upload File"
+              alife-file-to-base64
+              (onFileChanged)="profileIMG($event)"
+              accept="image/x-png,image/jpeg,image/jpg"
+            />
+          </div> -->
+      <!-- Delete Image -->
+      <!-- <button
+            type="btn"
+            class="clear position-relative border-0 mt-5 button-wrapper"
+            (click)="removeIMG()"
+            *ngIf="profileForm.controls.image.value"
+          >
+            <i class="fas fa-trash-alt text-white position-relative"></i>
+          </button> -->
+      <!-- </div> -->
+      <!-- </div> -->
+      <img src="assets/imgs/logo200.png" class="img-fluid" alt="logo" />
+    </div>
+    <div class="col-md-8">
+      <div class="mt-4 mt-lg-0">
+        <h2 class="user-title text-white display-4 overflow-auto">
+          {{ user.username }}
+        </h2>
+        <ul class="text-white px-0 mt-5">
+          <li class="my-4">
+            <h5
+              class="d-inline text-secondary2 mx-trans-2"
+              [translate]="'PROFILE.EMAIL'"
+            >
+              Email:
+            </h5>
+            <h5 class="d-inline">{{ user.email }}</h5>
+          </li>
+          <li class="my-4">
+            <h5
+              class="d-inline text-secondary2 mx-trans-2"
+              [translate]="'PROFILE.PHONE'"
+            >
+              Phone:
+            </h5>
+            <h5 class="d-inline mx-trans-2">01234567890</h5>
+            <ng-container *ngIf="true; else notVerified">
+              <small class="text-success" [translate]="'PROFILE.VERIFIED'"
+                >Verified</small
+              >
+            </ng-container>
+            <ng-template #notVerified>
+              <small
+                class="verify text-danger"
+                title="Click to verify your number"
+                [translate]="'PROFILE.NOT_VERIFIED'"
+                >Not Verified</small
+              >
+            </ng-template>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- Tabs Row -->
+  <div class="row">
+    <div class="col-lg-12">
+      <mat-tab-group color="accent" class="mt-5" mat-align-tabs="center">
+        <!-- Order History -->
+        <mat-tab>
+          <ng-template mat-tab-label>
+            <i class="fas fa-list mx-trans-2"></i>
+            <span [translate]="'PROFILE.ORDER_HISTORY'"> Order History </span>
+          </ng-template>
+          <!-- Order Histor Content -->
+          <ng-container
+            *ngIf="orderHistory$ | async as orderHistory; else noContent"
+          >
+            <!-- Table -->
+            <div class="text-white text-center mt-4">
+              <app-ordersList [orderHistory]="orderHistory"></app-ordersList>
+            </div>
+          </ng-container>
+          <ng-template #noContent>
+            <div class="w-50 mx-auto my-5 text-center text-white">
+              <ng-lottie width="100%" [options]="options"></ng-lottie>
+              <h1 class="mb-5" [translate]="'PROFILE.NO_ORDERS'">
+                No Orders Yet
+              </h1>
+              <button
+                [routerLink]="['/home']"
+                class="btn btn-skew-primary btn-block btn-lg text-dark mt-5"
+                [translate]="'PROFILE.BUY'"
+              >
+                Buy Now
+              </button>
+            </div>
+          </ng-template>
+        </mat-tab>
+        <!-- Edit Profile -->
+        <mat-tab>
+          <ng-template mat-tab-label>
+            <i class="fas fa-info-circle mx-trans-2"></i>
+            <span [translate]="'PROFILE.EDIT'"> Edit Profile </span>
+          </ng-template>
+          <!-- Edit Profile Form -->
+          <form
+            [formGroup]="profileForm"
+            (ngSubmit)="submitProfileForm(profileForm.value)"
+            class="mt-4 w-100 justify-content-center ml-0"
+          >
+            <div class="text-white mt-4 col-md-6 mx-auto">
+              <!-- username -->
+              <div class="row my-2">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label for="username">Username</label>
+                    <input
+                      type="text"
+                      id="username"
+                      class="form-control theme-input"
+                      formControlName="username"
+                      placeholder="{{ 'FORM.NAME' | translate }}"
+                      required
+                    />
+                    <!-- Frontend Validation -->
+                    <div
+                      class="theme-error wow shake"
+                      *ngIf="showValidationError(profileForm, 'username')"
+                    >
+                      {{ getFormValidationMessage(profileForm, "username") }}
+                    </div>
+                    <!-- Backend Validation -->
+                    <div
+                      class="theme-error wow shake"
+                      *ngIf="
+                        (serverErrors$ | async)?.username &&
+                        (serverErrors$ | async) as serverErrors
+                      "
+                    >
+                      {{ serverErrors["username"] }}
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Phone number -->
+              <div class="row my-2">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label for="phoneNumber">Phone Number</label>
+                    <input
+                      type="text"
+                      id="phoneNumber"
+                      class="form-control theme-input"
+                      formControlName="phoneNumber"
+                      placeholder="{{ 'FORM.PHONE' | translate }}"
+                      required
+                    />
+                    <!-- Frontend Validation -->
+                    <div
+                      class="theme-error wow shake"
+                      *ngIf="showValidationError(profileForm, 'phoneNumber')"
+                    >
+                      {{ getFormValidationMessage(profileForm, "phoneNumber") }}
+                    </div>
+                    <!-- Backend Validation -->
+                    <div
+                      class="theme-error wow shake"
+                      *ngIf="
+                        (serverErrors$ | async)?.phone &&
+                        (serverErrors$ | async) as serverErrors
+                      "
+                    >
+                      {{ serverErrors["phone"] }}
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Password -->
+              <div class="row my-2">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label for="password">Password</label>
+                    <input
+                      type="password"
+                      class="form-control theme-input"
+                      formControlName="password"
+                      placeholder="{{ 'FORM.PASSWORD' | translate }}"
+                      required
+                    />
+                    <!-- Frontend Validation -->
+                    <div
+                      class="theme-error wow shake"
+                      *ngIf="showValidationError(passwordForm, 'password')"
+                    >
+                      {{ getFormValidationMessage(passwordForm, "password") }}
+                    </div>
+                    <!-- Backend Validation -->
+                    <div
+                      class="theme-error wow shake"
+                      *ngIf="
+                        (serverErrors$ | async)?.oldPassword &&
+                        (serverErrors$ | async) as serverErrors
+                      "
+                    >
+                      {{ serverErrors["oldPassword"] }}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Submit -->
+            <div class="col-md-12 px-0 text-center">
+              <button
+                class="mt-4 btn btn-skew-primary border-0 text-dark px-5 py-3"
+                [translate]="'PROFILE.SAVE'"
+                [disabled]="profileForm.invalid"
+              >
+                Save Changes
+              </button>
+            </div>
+          </form>
+        </mat-tab>
+        <mat-tab>
+          <ng-template mat-tab-label>
+            <i class="fas fa-info-circle mx-trans-2"></i>
+            <span [translate]="'PROFILE.CHANGE_PASSWORD'">
+              Change Password
+            </span>
+          </ng-template>
+
+          <!-- Password Form -->
+          <form
+            [formGroup]="passwordForm"
+            (ngSubmit)="submitPasswordForm(passwordForm.value)"
+            class="mt-5 w-100 justify-content-center ml-0"
+          >
+            <div class="text-white mt-4 col-md-6 mx-auto">
+              <!-- Old Password -->
+              <div class="row my-2">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label for="oldPassword">Old Password</label>
+                    <input
+                      type="password"
+                      id="oldPassword"
+                      class="form-control theme-input"
+                      formControlName="oldPassword"
+                      placeholder="{{ 'FORM.OLD_PASSWORD' | translate }}"
+                      required
+                    />
+                    <!-- Frontend Validation -->
+                    <div
+                      class="theme-error wow shake"
+                      *ngIf="showValidationError(passwordForm, 'oldPassword')"
+                    >
+                      {{
+                        getFormValidationMessage(passwordForm, "oldPassword")
+                      }}
+                    </div>
+                    <!-- Backend Validation -->
+                    <div
+                      class="theme-error wow shake"
+                      *ngIf="
+                        (serverErrors$ | async)?.oldPassword &&
+                        (serverErrors$ | async) as serverErrors
+                      "
+                    >
+                      {{ serverErrors["oldPassword"] }}
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- password -->
+              <div class="row my-2">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="password">Password</label>
+                    <input
+                      type="password"
+                      id="password"
+                      class="form-control theme-input"
+                      formControlName="password"
+                      placeholder="{{ 'FORM.PASSWORD' | translate }}"
+                      required
+                    />
+                    <!-- Frontend Validation -->
+
+                    <div
+                      class="theme-error wow shake"
+                      *ngIf="showValidationError(passwordForm, 'password')"
+                    >
+                      {{ getFormValidationMessage(passwordForm, "password") }}
+                    </div>
+                  </div>
+                  <!-- Backend Validation -->
+                  <div
+                    class="theme-error wow shake"
+                    *ngIf="
+                      (serverErrors$ | async)?.newPassword &&
+                      (serverErrors$ | async) as serverErrors
+                    "
+                  >
+                    {{ serverErrors["newPassword"] }}
+                  </div>
+                </div>
+                <!-- Conferm Password -->
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="password">Confirm Password</label>
+
+                    <input
+                      type="password"
+                      id="confirmPassword"
+                      class="form-control theme-input"
+                      formControlName="confirmPassword"
+                      placeholder="{{ 'FORM.CONFIRM_PASSWORD' | translate }}"
+                      required
+                    />
+                    <!-- Frontend Validation -->
+                    <div
+                      class="theme-error wow shake"
+                      *ngIf="
+                        showValidationError(passwordForm, 'confirmPassword')
+                      "
+                    >
+                      {{
+                        getFormValidationMessage(
+                          passwordForm,
+                          "confirmPassword"
+                        )
+                      }}
+                    </div>
+                    <!-- Backend Validation -->
+                    <div
+                      class="theme-error wow shake"
+                      *ngIf="
+                        (serverErrors$ | async)?.newPasswordRepeat &&
+                        (serverErrors$ | async) as serverErrors
+                      "
+                    >
+                      {{ serverErrors["newPasswordRepeat"] }}
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Submit -->
+              <div class="col-md-12 px-0 text-center">
+                <button
+                  class="mt-4 btn btn-skew-primary border-0 text-dark px-5 py-3"
+                  [translate]="'PROFILE.SAVE'"
+                  [disabled]="passwordForm.invalid"
+                >
+                  Save Changes
+                </button>
+              </div>
+            </div>
+          </form>
+        </mat-tab>
+      </mat-tab-group>
+    </div>
+  </div>
+</div>

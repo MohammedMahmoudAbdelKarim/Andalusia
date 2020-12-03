@@ -1,0 +1,61 @@
+<div
+  id="faq"
+  class="container my-5 wow fadeIn py-3"
+  dir="{{ direction$ | async }}"
+>
+  <div class="row">
+    <h2 class="theme-header text-center mb-5 w-100">
+      Frequently Asked Questions
+    </h2>
+    <!-- Collapse -->
+    <div class="col-12 text-white">
+      <!-- Collapse -->
+      <div class="accordion" id="accordionExample">
+        <!-- Loop for FAQ -->
+        <div
+          class="card bg-dark mb-3"
+          *ngFor="let question of questions; let i = index"
+        >
+          <div class="card-header" id="heading{{ i }}">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link btn-block d-flex align-items-center justify-content-between"
+                type="button"
+                data-toggle="collapse"
+                [attr.data-target]="'#collapse' + i"
+                [attr.aria-controls]="'#collapse' + i"
+                aria-expanded="true"
+                (click)="toggle(question)"
+              >
+                <!-- Question ? -->
+                <span> {{ i + 1 }} - {{ question.question }} </span>
+                <i
+                  [ngClass]="{
+                    closed: !question.status,
+                    opened: question.status
+                  }"
+                ></i>
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse{{ i }}"
+            class="collapse"
+            [attr.aria-labelledby]="'heading' + i"
+            data-parent="#accordionExample"
+          >
+            <div
+              class="card-body"
+              [ngClass]="
+                (direction$ | async) == 'rtl' ? 'text-right' : 'text-left'
+              "
+            >
+              <!-- Answer.. -->
+              {{ question.answer }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

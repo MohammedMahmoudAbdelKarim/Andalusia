@@ -1,0 +1,74 @@
+$englishFont: "RussoOne";
+$arabicFont: "Cairo";
+
+@font-face {
+  font-family: $englishFont;
+  src: url("assets/fonts/RussoOne.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: $arabicFont;
+  src: url("assets/fonts/Cairo-Regular.ttf") format("opentype");
+}
+
+.font-english {
+  font-family: $englishFont;
+}
+
+.font-arabic {
+  font-family: $arabicFont;
+}
+
+main:lang(en),
+header:lang(en),
+footer:lang(en) {
+  font-family: $englishFont;
+  text-align: left !important;
+
+  .mx-trans-1 {
+    margin-right: 0.25rem !important;
+  }
+
+  .mx-trans-2 {
+    margin-right: 0.5rem !important;
+  }
+
+  .mx-trans-3 {
+    margin-right: 1rem !important;
+  }
+
+  .mx-trans-4 {
+    margin-right: 1.5rem !important;
+  }
+
+  .mx-trans-3 {
+    margin-right: 3rem !important;
+  }
+}
+
+main:lang(ar),
+header:lang(ar),
+footer:lang(ar) {
+  font-family: $arabicFont;
+  text-align: right !important;
+
+  .mx-trans-1 {
+    margin-left: 0.25rem !important;
+  }
+
+  .mx-trans-2 {
+    margin-left: 0.5rem !important;
+  }
+
+  .mx-trans-3 {
+    margin-left: 1rem !important;
+  }
+
+  .mx-trans-4 {
+    margin-left: 1.5rem !important;
+  }
+
+  .mx-trans-3 {
+    margin-left: 3rem !important;
+  }
+}

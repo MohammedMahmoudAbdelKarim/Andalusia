@@ -1,0 +1,49 @@
+<div class="text-center py-5" dir="{{ direction$ | async }}">
+  <!-- Section Header -->
+  <!-- <h3 class="display-4 mb-4 font-weight-bold wow fadeInDown">
+    Zero Gaming By Numbers
+  </h3> -->
+
+  <!-- Counters -->
+  <div class="p-5 mt-5 counters text-center">
+    <div class="row" id="counter">
+      <!-- Users -->
+      <div class="col-md-4 wow fadeInDown" data-wow-delay=".5s">
+        <h5
+          class="text-dark font-weight-bold text-uppercase"
+          [translate]="'COUNTERS.USERS'"
+        >
+          Users
+        </h5>
+        <i class="fa fa-users text-dark fa-2x"></i>
+        <p
+          class="counter-value text-dark mt-2 font-weight-bold display-4"
+          data-count="30"
+        >
+          0
+        </p>
+      </div>
+      <!-- Downloads -->
+      <div class="col-md-4 wow fadeInDown mt-4 mt-md-0" data-wow-delay=".5s">
+        <h5 class="text-dark font-weight-bold text-uppercase" [translate]="'COUNTERS.DOWNLOADS'">
+          Dowloads
+        </h5>
+        <i class="fa fa-download fa-2x text-dark"></i>
+        <p class="counter-value text-dark mt-2 display-4" data-count="80">0</p>
+      </div>
+      <!-- Games -->
+      <div class="col-md-4 wow fadeInDown mt-4 mt-md-0" data-wow-delay=".5s">
+        <h5 class="text-dark font-weight-bold text-uppercase" [translate]="'COUNTERS.GAMES'">
+          Games
+        </h5>
+        <i class="fa fa-gamepad fa-2x text-dark"></i>
+        <p
+          class="counter-value text-dark mt-2 font-weight-bold display-4"
+          data-count="70"
+        >
+          0
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

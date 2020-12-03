@@ -1,0 +1,219 @@
+<div id="register" class="container wow fadeIn py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 offset-lg-3">
+        <div class="text-center">
+          <img
+            src="assets/imgs/logo200.png"
+            class="img-fluid wow fadeInDown"
+            alt="logo"
+          />
+          <form
+            [formGroup]="registerForm"
+            (ngSubmit)="register()"
+            class="mt-4 w-100 ml-0"
+          >
+            <!-- User Name -->
+            <div class="form-row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    class="form-control theme-input"
+                    formControlName="userName"
+                    placeholder="{{ 'FORM.NAME' | translate }}"
+                    required
+                  />
+                  <!-- Frontend Validation -->
+                  <div
+                    class="theme-error wow shake"
+                    *ngIf="showValidationError(registerForm, 'userName')"
+                  >
+                    {{ getFormValidationMessage(registerForm, "userName") }}
+                  </div>
+                  <!-- Backend Validation -->
+                  <div
+                    class="theme-error wow shake"
+                    *ngIf="
+                      (serverErrors$ | async)?.username &&
+                      (serverErrors$ | async) as serverErrors
+                    "
+                  >
+                    {{ serverErrors["username"] }}
+                  </div>
+                </div>
+              </div>
+              <!-- Email -->
+              <div class="col-md-12 mt-4">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    class="form-control theme-input"
+                    formControlName="email"
+                    placeholder="{{ 'FORM.EMAIL' | translate }}"
+                    required
+                  />
+                  <!-- Frontend Validation -->
+                  <div
+                    class="theme-error wow shake"
+                    *ngIf="showValidationError(registerForm, 'email')"
+                  >
+                    {{ getFormValidationMessage(registerForm, "email") }}
+                  </div>
+                  <!-- Backend Validation -->
+                  <div
+                    class="theme-error wow shake"
+                    *ngIf="
+                      (serverErrors$ | async)?.email &&
+                      (serverErrors$ | async) as serverErrors
+                    "
+                  >
+                    {{ serverErrors["email"] }}
+                  </div>
+                </div>
+              </div>
+
+              <!-- Password -->
+              <div class="col-md-6 mt-4">
+                <div class="form-group">
+                  <input
+                    type="password"
+                    class="form-control theme-input"
+                    formControlName="password"
+                    placeholder="{{ 'FORM.PASSWORD' | translate }}"
+                    required
+                  />
+                  <!-- Frontend Validation -->
+                  <div
+                    class="theme-error wow shake"
+                    *ngIf="showValidationError(registerForm, 'password')"
+                  >
+                    {{ getFormValidationMessage(registerForm, "password") }}
+                  </div>
+                  <!-- Backend Validation -->
+                  <div
+                    class="theme-error wow shake"
+                    *ngIf="
+                      (serverErrors$ | async)?.password &&
+                      (serverErrors$ | async) as serverErrors
+                    "
+                  >
+                    {{ serverErrors["password"] }}
+                  </div>
+                </div>
+              </div>
+
+              <!-- Confirm Password -->
+              <div class="col-md-6 mt-4">
+                <div class="form-group">
+                  <input
+                    type="password"
+                    class="form-control theme-input"
+                    formControlName="confirmPassword"
+                    placeholder="{{ 'FORM.CONFIRM_PASSWORD' | translate }}"
+                    required
+                  />
+                  <!-- Frontend Validation -->
+                  <div
+                    class="theme-error wow shake"
+                    *ngIf="showValidationError(registerForm, 'confirmPassword')"
+                  >
+                    {{
+                      getFormValidationMessage(registerForm, "confirmPassword")
+                    }}
+                  </div>
+                  <!-- Backend Validation -->
+                  <div
+                    class="theme-error wow shake"
+                    *ngIf="
+                      (serverErrors$ | async)?.password_repeat &&
+                      (serverErrors$ | async) as serverErrors
+                    "
+                  >
+                    {{ serverErrors["password_repeat"] }}
+                  </div>
+                </div>
+              </div>
+
+              <!-- Phone Number -->
+              <div class="col-md-12 mt-4">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    class="form-control theme-input"
+                    placeholder="{{ 'FORM.PHONE' | translate }}"
+                    formControlName="phoneNumber"
+                    required
+                  />
+                  <!-- Frontend Validation -->
+                  <div
+                    class="theme-error wow shake"
+                    *ngIf="showValidationError(registerForm, 'phoneNumber')"
+                  >
+                    {{ getFormValidationMessage(registerForm, "phoneNumber") }}
+                  </div>
+
+                  <!-- Backend Validation -->
+                  <div
+                    class="theme-error wow shake"
+                    *ngIf="
+                      (serverErrors$ | async)?.phone_number &&
+                      (serverErrors$ | async) as serverErrors
+                    "
+                  >
+                    {{ serverErrors["phone_number"] }}
+                  </div>
+                </div>
+              </div>
+
+              <!-- Terms and Conditions -->
+              <div class="col-md-12 mt-4">
+                <mat-checkbox
+                  required
+                  formControlName="termsConditions"
+                  color="primary"
+                  class="text-white text-left"
+                >
+                  <span [translate]="'FORM.AGREE'">
+                    I agree that i've carefully read the
+                  </span>
+                  <a
+                    (click)="openDialog($event)"
+                    class="terms mx-1 text-primary font-weight-bold"
+                    [translate]="'FORM.TERMS'"
+                    >Terms and Conditions</a
+                  >
+                </mat-checkbox>
+                <!-- Frontend Validation -->
+                <div
+                  class="theme-error wow shake"
+                  *ngIf="showValidationError(registerForm, 'termsConditions')"
+                >
+                  {{
+                    getFormValidationMessage(registerForm, "termsConditions")
+                  }}
+                </div>
+              </div>
+
+              <div class="register mt-4 text-center col-md-12">
+                <a routerLink="/auth/login" [translate]="'FORM.HAVE_ACCOUNT'"
+                  >Already have an account ?</a
+                >
+              </div>
+
+              <div class="text-center col-md-12">
+                <button
+                  class="mt-4 btn btn-skew-primary font-weight-bolder border-0 text-dark text-uppercase p-3"
+                  [disabled]="registerForm.invalid"
+                  [translate]="'FORM.CREATE_ACCOUNT'"
+                >
+                  Create account
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

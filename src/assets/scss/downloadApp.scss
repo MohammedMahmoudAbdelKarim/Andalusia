@@ -1,0 +1,15 @@
+#download-app {
+  // Mobile
+  @media (min-width: 320px) and (max-width: 425px) {
+    .text {
+      text-align: center;
+    }
+  }
+
+  // Tablet
+  @media (min-width: 426px) and (max-width: 768px) {
+    .text {
+      text-align: center;
+    }
+  }
+}

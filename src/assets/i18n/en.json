@@ -1,0 +1,95 @@
+{
+  "HEADER": {
+    "HOME": "Home",
+    "ABOUT_US": "About Us",
+    "FAQS": "FAQs",
+    "CONTACT_US": "Contact Us",
+    "YOUR_CART": "Your Cart",
+    "LOGIN": "Login",
+    "LOGOUT": "Logout",
+    "REGISTER": "Register"
+  },
+  "FOOTER": {
+    "ABOUT": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit molestiae aut dolores? Illo rerum, doloremque adipisci ut, rem vel tempora porro quisquam sapiente dignissimos sed animi laudantium incidunt distinctio. In.",
+    "QUICK_LINKS": "Quick Links",
+    "ABOUT_US": "About Us",
+    "FAQS": "FAQs",
+    "CONTACT_US": "Contact Us",
+    "FOLLOW_US": "Follow Us",
+    "ACCEPT": "We Accept",
+    "COPY_RIGHTS": "All Rights are Resevied 2020"
+  },
+  "FORM": {
+    "NAME": "Your Name",
+    "TITLE": "Title",
+    "MESSAGE": "Type your message here...",
+    "SELECT_REASON": "Choose Reason",
+    "SUBMIT": "Submit",
+    "FORGET_PASSWORD": "Forgot Password?",
+    "LOGIN": "Login",
+    "NO_ACCOUT": "Don't have an account?",
+    "EMAIL": "Enter your email",
+    "PASSWORD": "Password",
+    "CONFIRM_PASSWORD": "Confirm Password",
+    "OLD_PASSWORD": "Old Password",
+
+    "PHONE": "Phone Number",
+    "AGREE": "I agree that i've carefully read the",
+    "TERMS": "Terms and Conditions",
+    "HAVE_ACCOUNT": "Already have an account ?",
+    "CREATE_ACCOUNT": "Create Account",
+    "RESET_PASSWORD": "Reset Password"
+  },
+  "CART": {
+    "EMPTY": "Your Cart is Empty",
+    "BACK": "Back",
+    "ORDER_DETAILS": "Order Details",
+    "PRODUCT_NAME": "Product Name:",
+    "PRODUCT_QUANTITY": "Product Quantity:",
+    "DISCOUNT": "Discount:",
+    "PRODUCT_PRICE": "Product Price:",
+    "TOTAL_PRODUCT_PRICE": "Total Products Price:",
+    "TOTAL_AMOUNT": "Total Amount",
+    "PLACE_ORDER": "Place Order",
+    "REMOVE": "Remove",
+    "APPLY_COUPON": "Add Coupon ",
+    "HAVE_COUPON": "Do you have a Coupon?"
+  },
+  "PROFILE": {
+    "UPLOAD": "Upload",
+    "NOT_VERIFIED": "Not Verified",
+    "VERIFIED": "Verified",
+    "ORDER_HISTORY": "Order History",
+    "EDIT": "Edit Profile",
+    "CHANGE_PASSWORD": "Change Password",
+    "BUY": "Buy Now",
+    "NO_ORDERS": "No Orders Yet",
+    "SAVE": "Save Changes",
+    "EMAIL": "Email :",
+    "PHONE": "Phone :"
+  },
+  "COUNTERS": {
+    "USERS": "Users",
+    "DOWNLOADS": "Downloads",
+    "GAMES": "Games"
+  },
+  "DOWNLOADAPP": {
+    "DOWNLOADAPP": "Download App",
+    "DOWNLOAD_DETAILS": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis itaque, harum in totam porro et.",
+    "DOWNLOADNOW": "Download Now"
+  },
+  "PRODUCTS": {
+    "OUR_PRODUCTS": "Our Products",
+    "ADD_CART": "Add to Cart"
+  },
+  "ORDER_HISTORY": {
+    "ORDER_ID": "Order Id",
+    "DATE": "Date",
+    "PRICE": "Price",
+    "STATUS": "Status",
+    "ACTIONS": "Actions",
+    "NEW": "New",
+    "CANCELED": "Canceled",
+    "VIEW": "View"
+  }
+}

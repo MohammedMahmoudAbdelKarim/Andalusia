@@ -1,0 +1,17 @@
+<!-- Header Start -->
+<header class="sticky-top" [lang]="lang">
+  <app-header></app-header>
+  <app-progressBar *ngIf="loader$ | async"></app-progressBar>
+</header>
+<!-- Header End -->
+<!-- Router Outlet Start -->
+<main [lang]="lang">
+  <router-outlet (activate)="onRouterChange()"></router-outlet>
+</main>
+<!-- Router Outlet End -->
+
+<!-- Footer Start -->
+<footer [lang]="lang">
+  <app-footer></app-footer>
+</footer>
+<!-- Footer End -->

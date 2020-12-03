@@ -1,0 +1,87 @@
+.card-product {
+  position: relative;
+
+  .discount {
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 50% 79%, 0 100%);
+    position: absolute;
+    top: 0;
+    background: $secondary-gradient-top;
+    padding: 15px;
+    font-weight: 600;
+    margin: 0 auto;
+    height: 65px;
+    font-size: 1.1rem;
+    width: 65px;
+    height: 110px;
+  }
+  button {
+    background-image: $secondary-gradient-right;
+    border: 0;
+    outline: 0;
+    font-size: 1rem;
+
+    &:hover {
+      background-image: $secondary-gradient-left;
+    }
+  }
+}
+
+// owl-carsoual buttons
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel .owl-nav button.owl-next {
+  padding: 20px 30px !important;
+}
+
+.owl-nav {
+  margin-top: 20px;
+
+  button {
+    position: absolute;
+    outline: none;
+    background-image: $secondary-gradient-right !important;
+    height: 100px;
+    top: 50%;
+
+    &:hover {
+      background-image: $secondary-gradient-left !important;
+    }
+
+    span {
+      font-size: 3rem;
+      line-height: 2rem;
+      color: $darker;
+    }
+  }
+
+  .disabled {
+    opacity: 0.1;
+  }
+}
+
+.owl-prev {
+  left: -10%;
+}
+
+.owl-next {
+  right: -10%;
+}
+
+.owl-dots {
+  display: none;
+}
+
+@media (min-width: 320px) and (max-width: 1024px) {
+  .owl-nav {
+    button {
+      top: 105%;
+    }
+
+    .owl-prev {
+      left: 10%;
+    }
+
+    .owl-next {
+      right: 10%;
+    }
+  }
+}
