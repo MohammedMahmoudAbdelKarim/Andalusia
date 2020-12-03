@@ -1,6 +1,10 @@
-#footer {
+footer {
   background: #363636;
-  z-index: 1020;
+  padding: 35px 88px;
+  // h2,
+  // h4 {
+  //   font-family: $sintony;
+  // }
 
   hr {
     border-color: #7e807d;
@@ -13,9 +17,10 @@
       svg {
         cursor: pointer;
         transition: all 0.3s ease-in-out;
-
+        color: $gray !important;
+        // font-family: $myRaid;
         &:hover {
-          color: $secondary !important;
+          color: $hover !important;
         }
       }
     }
@@ -28,15 +33,29 @@
   }
 }
 .quick-links {
-  h4 {
-    font-family: $sintony;
-  }
-  ul {
-    li {
-      a {
-        color: #aeb0ab !important;
-        font-family: $myRaid;
+}
+.new-letter {
+  .form-group {
+    .form-control {
+      border-radius: 0;
+      padding: 23px 25px;
+      font-size: 0.9rem;
+    }
+    button {
+      outline: 0;
+      background: #e8663b;
+      font-weight: 100;
+      font-size: 0.8rem;
+      color: $white;
+      width: 175.01px;
+      height: 49px;
+      &:hover {
+        background: #b3441f;
+        transition: all 0.3s ease-in-out;
       }
     }
+  }
+  p {
+    color: $gray;
   }
 }

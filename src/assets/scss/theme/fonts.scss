@@ -4,12 +4,8 @@ $italic: "italic";
 $regular: "regular";
 $sintony: "Sintony-Regular";
 $myRaid: "MyriadPro-Regular";
-$rufina: "Rufina-Regular";
+$arabicFont: "Cairo";
 
-@font-face {
-  font-family: $rufina;
-  src: url("assets/fonts/Rufina-Regular.ttf") format("opentype");
-}
 @font-face {
   font-family: $myRaid;
   src: url("assets/fonts/MyriadPro-Regular.otf") format("opentype");
@@ -38,64 +34,69 @@ $rufina: "Rufina-Regular";
   src: url("assets/fonts/CORBEL.TTF") format("opentype");
 }
 
-// .font-english {
-//   font-family: $regular;
-// }
+@font-face {
+  font-family: $arabicFont;
+  src: url("assets/fonts/Cairo-Regular.ttf") format("opentype");
+}
 
-// .font-arabic {
-//   font-family: $regular;
-// }
+.font-english {
+  font-family: $regular;
+}
 
-// main:lang(en),
-// header:lang(en),
-// footer:lang(en) {
-//   font-family: $regular;
-//   text-align: left !important;
+.font-arabic {
+  font-family: $arabicFont;
+}
 
-//   .mx-trans-1 {
-//     margin-right: 0.25rem !important;
-//   }
+main:lang(en),
+header:lang(en),
+footer:lang(en) {
+  font-family: $regular;
+  text-align: left !important;
 
-//   .mx-trans-2 {
-//     margin-right: 0.5rem !important;
-//   }
+  .mx-trans-1 {
+    margin-right: 0.25rem !important;
+  }
 
-//   .mx-trans-3 {
-//     margin-right: 1rem !important;
-//   }
+  .mx-trans-2 {
+    margin-right: 0.5rem !important;
+  }
 
-//   .mx-trans-4 {
-//     margin-right: 1.5rem !important;
-//   }
+  .mx-trans-3 {
+    margin-right: 1rem !important;
+  }
 
-//   .mx-trans-3 {
-//     margin-right: 3rem !important;
-//   }
-// }
+  .mx-trans-4 {
+    margin-right: 1.5rem !important;
+  }
 
-// main:lang(ar),
-// header:lang(ar),
-// footer:lang(ar) {
-//   font-family: $regular;
-//   text-align: right !important;
+  .mx-trans-3 {
+    margin-right: 3rem !important;
+  }
+}
 
-//   .mx-trans-1 {
-//     margin-left: 0.25rem !important;
-//   }
+main:lang(ar),
+header:lang(ar),
+footer:lang(ar) {
+  font-family: $arabicFont;
+  text-align: right !important;
 
-//   .mx-trans-2 {
-//     margin-left: 0.5rem !important;
-//   }
+  .mx-trans-1 {
+    margin-left: 0.25rem !important;
+  }
 
-//   .mx-trans-3 {
-//     margin-left: 1rem !important;
-//   }
+  .mx-trans-2 {
+    margin-left: 0.5rem !important;
+  }
 
-//   .mx-trans-4 {
-//     margin-left: 1.5rem !important;
-//   }
+  .mx-trans-3 {
+    margin-left: 1rem !important;
+  }
 
-//   .mx-trans-3 {
-//     margin-left: 3rem !important;
-//   }
-// }
+  .mx-trans-4 {
+    margin-left: 1.5rem !important;
+  }
+
+  .mx-trans-3 {
+    margin-left: 3rem !important;
+  }
+}

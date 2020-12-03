@@ -1,61 +1,100 @@
-<div id="footer" class="container-fluid p-5 text-white">
-  <div class="mx-3">
-    <h2>Explore More</h2>
-    <hr />
-    <ul
-      class="list-unstyled mt-5 pt-4 row w-100 align-items-top justify-content-between"
+<!-- Start Footer -->
+<footer id="footer" class="container-fluid" dir="{{ direction$ | async }}">
+  <h2 class="text-white" [translate]="'FOOTER.EXPLORE_MORE'"></h2>
+  <hr />
+  <ul
+    class="list-unstyled mt-5 pt-4 row w-100 no-gutters align-items-top justify-content-between"
+  >
+    <!-- Start First Section  -->
+    <li
+      class="col-lg-3 col-md-4 col-sm-12 col-xs-12 quick-links wow fadeInDown"
     >
-      <li class="text-white col-lg-5 col-md-5 col-sm-12 col-xs-12 quick-links">
-        <h4 class="text-uppercase">Quick Links</h4>
-        <ul class="list-unstyled px-0 mt-5">
-          <li class="my-3">
-            <a class="">HOME</a>
-          </li>
-          <li class="my-3">
-            <a class="">ABOUT US </a>
-          </li>
-          <li class="my-3">
-            <a class="">CAREERS</a>
-          </li>
-          <li class="my-3">
-            <a class="">EVENTS</a>
-          </li>
-          <li class="my-3">
-            <a class="">NEWS</a>
-          </li>
-          <li class="my-3">
-            <a class="">CONTACT</a>
-          </li>
-        </ul>
-      </li>
-      <li class="text-white col-lg-4 col-md-4 col-sm-4 col-xs-12 mt-4 mt-md-0">
-        <h4 [translate]="'FOOTER.QUICK_LINKS'">Quick Links</h4>
-        <ul class="list-unstyled px-0">
-          <li class="my-3">
-            <a class="">HOME</a>
-          </li>
-          <li class="my-3">
-            <a class="">HOME</a>
-          </li>
-          <li class="my-3">
-            <a class="">HOME</a>
-          </li>
-        </ul>
-        <hr class="d-inline-block w-50" />
-        <h4 [translate]="'FOOTER.FOLLOW_US'" class="mb-3">Follow us</h4>
-        <i class="fab fa-facebook fa-2x mx-1"></i>
-        <i class="fab fa-youtube fa-2x mx-1"></i>
-      </li>
-      <li class="text-white col-lg-3 col-md-3 col-sm-4 col-xs-12 mt-4 mt-md-0">
-        <h4 [translate]="'FOOTER.ACCEPT'" class="mb-3">We Accept</h4>
-        <i class="fab fa-cc-visa fa-4x mx-1"></i>
-        <i class="fab fa-cc-mastercard fa-4x mx-1"></i>
-      </li>
-    </ul>
-  </div>
-  <div class="bg-darker w-100 text-center py-3">
-    <p class="text-secondary m-0" [translate]="'FOOTER.COPY_RIGHTS'">
-      All Rights are Resevied &copy; 2020
-    </p>
-  </div>
-</div>
+      <h4
+        class="text-uppercase text-white"
+        [translate]="'FOOTER.QUICK_LINKS'"
+      ></h4>
+      <ul class="list-unstyled px-0 mt-5">
+        <li class="my-3">
+          <a [translate]="'FOOTER.HOME'">HOME</a>
+        </li>
+        <li class="my-3">
+          <a [translate]="'FOOTER.ABOUT_US'">ABOUT US </a>
+        </li>
+        <li class="my-3">
+          <a [translate]="'FOOTER.CAREERS'">CAREERS</a>
+        </li>
+        <li class="my-3">
+          <a [translate]="'FOOTER.EVENTS'">EVENTS</a>
+        </li>
+        <li class="my-3">
+          <a [translate]="'FOOTER.NEWS'">NEWS</a>
+        </li>
+        <li class="my-3">
+          <a [translate]="'FOOTER.CONTACT_US'">CONTACT</a>
+        </li>
+      </ul>
+    </li>
+    <!-- End First Section  -->
+    <!-- Start Second Section  -->
+    <li
+      class="col-lg-3 col-md-4 col-sm-12 col-xs-12 mt-4 mt-md-0 quick-links wow fadeInDown"
+    >
+      <h4
+        class="text-uppercase text-white"
+        [translate]="'FOOTER.OUR_HOSPITAL'"
+      ></h4>
+      <ul class="list-unstyled px-0 mt-5">
+        <li class="my-3">
+          <a [translate]="'FOOTER.SHALALAT'"></a>
+        </li>
+        <li class="my-3">
+          <a [translate]="'FOOTER.SEMOUHA'"></a>
+        </li>
+        <li class="my-3">
+          <a [translate]="'FOOTER.ANTONIADES'"></a>
+        </li>
+        <li class="my-3">
+          <a [translate]="'FOOTER.MAADI'"></a>
+        </li>
+        <li class="my-3">
+          <a [translate]="'FOOTER.JAMAA'"></a>
+        </li>
+      </ul>
+    </li>
+    <!-- End Second Section  -->
+    <!-- Start Last Section  -->
+    <li
+      class="col-lg-6 col-md-4 col-sm-12 col-xs-12 mt-4 mt-md-0 new-letter wow fadeInDown"
+    >
+      <h4
+        class="mb-3 text-white font-weight-normal"
+        [translate]="'FOOTER.NEW_LETTER'"
+      >
+        NEWS LETTER
+      </h4>
+      <div
+        class="form-group row no-gutters mt-5 d-flex align-items-center position-relative"
+      >
+        <input
+          type="email"
+          name="email"
+          placeholder="Email Address"
+          placeholder="{{ 'FOOTER.EMAIL' | translate }}"
+          id=""
+          class="form-control my-3 border-0 col-md-8"
+        />
+        <button class="border-0 col-md-4" [translate]="'FOOTER.SUBSCRIBE_NOW'">
+          SUBSCRIBE NOW
+        </button>
+      </div>
+      <p [translate]="'FOOTER.COPY_RIGHTS'">
+        COPYRIGHT © 2018 - ANDALUSIA GROUP
+      </p>
+      <i class="fab fa-facebook fa-2x mx-1"></i>
+      <i class="fab fa-youtube fa-2x mx-3"></i>
+      <i class="fab fa-twitter fa-2x mx-1"></i>
+    </li>
+    <!-- End Last Section  -->
+  </ul>
+</footer>
+<!-- End Footer -->

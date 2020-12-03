@@ -10,14 +10,24 @@
     "REGISTER": "Register"
   },
   "FOOTER": {
-    "ABOUT": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit molestiae aut dolores? Illo rerum, doloremque adipisci ut, rem vel tempora porro quisquam sapiente dignissimos sed animi laudantium incidunt distinctio. In.",
+    "EXPLORE_MORE": "Explore More",
     "QUICK_LINKS": "Quick Links",
-    "ABOUT_US": "About Us",
-    "FAQS": "FAQs",
-    "CONTACT_US": "Contact Us",
-    "FOLLOW_US": "Follow Us",
-    "ACCEPT": "We Accept",
-    "COPY_RIGHTS": "All Rights are Resevied 2020"
+    "HOME": "HOME",
+    "ABOUT_US": "ABOUT Us",
+    "CAREERS": "CAREERS",
+    "EVENTS": "EVENTS",
+    "NEWS": "NEWS",
+    "CONTACT_US": "CONTACT",
+    "OUR_HOSPITAL": "OUR HOSPITALS",
+    "SHALALAT": "AL SHALALAT",
+    "SEMOUHA": "SEMOUHA",
+    "ANTONIADES": "ANTONIADES",
+    "MAADI": "MAADI",
+    "JAMAA": "HAI EL JAMAA",
+    "NEW_LETTER": "NEWS LETTER",
+    "EMAIL": "Email Address",
+    "SUBSCRIBE_NOW": "SUBSCRIBE NOW",
+    "COPY_RIGHTS": "COPYRIGHT © 2018 - ANDALUSIA GROUP"
   },
   "FORM": {
     "NAME": "Your Name",

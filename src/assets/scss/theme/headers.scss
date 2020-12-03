@@ -1,15 +1,13 @@
 .theme-underline-header {
   font-size: calc(100% + 2vw + 1vh);
-  color: $white;
+  color: #101010;
+  font-weight: 900;
 
   &::after {
-    content: "";
+    content: url("./assets/imgs/line.svg");
     display: block;
-    margin: 0 auto;
-    width: calc(20% + 1vw + 1vh);
-    padding-top: 20px;
-    border-bottom: 1vw solid $secondary2;
-    transform: skewX(-25deg);
+    height: 0;
+    margin-top: -22px;
   }
 }
 

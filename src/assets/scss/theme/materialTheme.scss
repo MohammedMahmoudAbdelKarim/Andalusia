@@ -12,7 +12,7 @@
 
 $primary-map: (
   50: $primary,
-  100: $primary2,
+  100: $primary,
   contrast: (
     50: $dark-primary-text,
     100: $dark-primary-text,
@@ -69,8 +69,8 @@ tr.mat-row {
 }
 
 .mat-tab-header-pagination-chevron {
-  border-color: $secondary2 !important;
-  padding: 5px;;
+  border-color: $secondary !important;
+  padding: 5px;
 }
 .mat-tab-header-pagination-chevron {
   border-style: solid !important;
