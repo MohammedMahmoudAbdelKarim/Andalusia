@@ -1,4 +1,6 @@
 #mainHeader {
+  padding: 0 88px;
+  background: $white;
   // Header Body
   display: flex;
   align-items: center;
@@ -6,7 +8,7 @@
 
   .lang-btn {
     cursor: pointer;
-    color: $white;
+    color: $dark;
     width: 30px;
     text-align: center;
     &:hover {
@@ -19,30 +21,28 @@
     text-align: center;
   }
 
-  h2 {
-    font-size: 1.3rem;
-  }
-
   // Navigation Menu
   .nav-item {
-    padding: 0.3rem 2rem;
-    margin: 0.4rem;
+    // padding: 0.3rem 2rem;
+    padding: 25px 16px;
+    margin: 0 0.4rem;
     display: flex;
     align-items: center;
-    transform: skewX(-20deg);
+
+    // transform: skewX(-20deg);
     cursor: pointer;
 
     &:hover {
-      background-image: $secondary-gradient-right;
+      // background-image: $secondary-gradient-right;
 
       a {
-        color: $darker;
+        color: $hover;
+        font-weight: 500;
       }
     }
 
     a {
-      color: $white;
-      transform: skewX(20deg);
+      color: $dark;
       font-size: 1rem;
       padding: 0;
     }
@@ -51,47 +51,57 @@
   // Icons
   .nav-icon {
     position: relative;
-
-    .badge {
-      position: absolute;
-      left: 60%;
-      top: 10%;
-      font-size: 0.8rem;
-    }
-
     a {
-      color: $white;
-      font-size: 1.5rem;
+      font-size: 1rem;
       padding: 0;
       margin: 0 0.4rem;
+      color: $dark;
       cursor: pointer;
 
       &:hover {
-        color: $secondary2;
+        color: $hover;
         transition: all 0.3s ease-in-out;
       }
     }
   }
-
+  .fa-times {
+    color: $dark;
+  }
   // Drop Down List
   .dropdown-menu {
+    padding: 0;
     cursor: pointer;
-    left: -50% !important;
+    margin-top: 0;
+    .dropdown-divider {
+      border-top: 1px solid #e3e3e3;
+    }
+    a {
+      padding: 5px 16px;
+      margin: 0.5rem 0;
+      color: $dark !important;
+      &:hover {
+        color: $hover !important;
+      }
+    }
   }
 
   // Active for nav items
   .active {
     a {
-      color: $darker;
+      color: $hover;
+      font-family: $bold;
     }
-
-    background-image: $secondary-gradient-right;
   }
 
-  // Active for icons
-  .icon-active {
-    a {
-      color: $secondary2 !important;
+  .show {
+    background: #f6f6f6;
+  }
+
+  .language {
+    button {
+      outline: 0;
+      border: 0;
+      background: $white;
     }
   }
 
@@ -107,7 +117,7 @@
 .sidenav-container {
   background: rgba(0, 0, 0, 0.7);
   height: 100%;
-  margin-top: 65px;
+  margin-top: 69px;
   z-index: 999999;
   position: fixed;
   top: 0;
@@ -115,29 +125,34 @@
   width: 100%;
 
   .sidenav {
-    margin-top: 65px;
+    margin-top: 69px;
     height: 100vh;
     width: 250px;
     position: fixed;
     z-index: 999;
     top: 0;
     left: 0;
-    background-color: #111;
+    background: linear-gradient(#ca3423 0%, #eb6b3d 100%);
     overflow-x: hidden;
     transition: 0.5s;
-    padding-top: 80px;
     transform: translateX(-250px);
 
     a {
-      padding: 8px 8px 8px 32px;
+      padding: 10px;
       text-decoration: none;
-      font-size: 25px;
-      color: #818181;
+      font-size: 1rem;
+      color: $white;
       display: block;
       transition: 0.3s;
 
       &:hover {
-        color: #f1f1f1;
+        color: #ffb43a;
+      }
+    }
+    .active {
+      color: #ffb43a;
+      a {
+        color: #ffb43a !important;
       }
     }
 
@@ -171,9 +186,15 @@
 }
 
 @media (max-width: 992px) {
+  #mainHeader {
+    padding: 10px;
+  }
   .toggle-btn {
     display: inline !important;
   }
+}
+.fa-bars {
+  color: #eb6b3d;
 }
 
 .responsive-menu {
@@ -184,7 +205,7 @@
   .responsive-item {
     border-bottom: 0.5px solid $secondary2;
     border-bottom-style: groove;
-    padding-left: 60px;
+    padding-left: 27px;
 
     .fa-user-circle {
       font-size: 46px;
@@ -204,4 +225,8 @@
       color: $dark;
     }
   }
+}
+.dropdown-menu {
+  min-width: 100%;
+  border-radius: 0;
 }

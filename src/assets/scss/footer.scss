@@ -1,11 +1,10 @@
 #footer {
-  display: flex;
-  align-items: center;
+  background: #363636;
   z-index: 1020;
-  border-top: 3px solid $secondary2;
 
   hr {
-    border-color: $secondary;
+    border-color: #7e807d;
+    opacity: 0.1;
   }
 
   ul {
@@ -25,6 +24,19 @@
   @media (min-width: 320px) and (max-width: 425px) {
     ul {
       text-align: center;
+    }
+  }
+}
+.quick-links {
+  h4 {
+    font-family: $sintony;
+  }
+  ul {
+    li {
+      a {
+        color: #aeb0ab !important;
+        font-family: $myRaid;
+      }
     }
   }
 }

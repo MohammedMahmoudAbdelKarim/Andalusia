@@ -1,29 +1,29 @@
-%btnSkew {
-  clip-path: polygon(0 20%, 100% 0, 100% 100%, 0% 100%);
-}
+// %btnSkew {
+//   clip-path: polygon(0 20%, 100% 0, 100% 100%, 0% 100%);
+// }
 
-.btn-skew-secondary {
-  @extend %btnSkew;
-  background-image: $secondary-gradient-right;
-  &:hover {
-    background-image: $secondary-gradient-left;
-  }
-}
+// .btn-skew-secondary {
+//   @extend %btnSkew;
+//   background-image: $secondary-gradient-right;
+//   &:hover {
+//     background-image: $secondary-gradient-left;
+//   }
+// }
 
-.btn-skew-primary {
-  @extend %btnSkew;
-  background-image: $primary-gradient-right;
-  &:hover {
-    background-image: $primary-gradient-left;
-  }
-}
+// .btn-skew-primary {
+//   @extend %btnSkew;
+//   background-image: $primary-gradient-right;
+//   &:hover {
+//     background-image: $primary-gradient-left;
+//   }
+// }
 
-button:disabled {
-  opacity: 0.2;
-  cursor: not-allowed;
-  background: $diabled-gradient-right;
+// button:disabled {
+//   opacity: 0.2;
+//   cursor: not-allowed;
+//   background: $diabled-gradient-right;
 
-  &:hover {
-    background: $diabled-gradient-left;
-  }
-}
+//   &:hover {
+//     background: $diabled-gradient-left;
+//   }
+// }

@@ -72,7 +72,7 @@
 
 // Global Styles
 body {
-  background-color: $darker;
+  // background-color: $darker;
   font-size: 14px;
 }
 
@@ -97,18 +97,34 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
+// Header Mat-Menu
+.mat-menu-panel {
+  min-width: 0 !important;
+  max-width: 80px !important;
+  background: #f6f6f6;
+
+  button {
+    outline: 0;
+  }
+}
+
 // JUST FOR REFERENCE
 // Mobile
-@media (min-width: 320px) and (max-width: 425px) {}
+@media (min-width: 320px) and (max-width: 425px) {
+}
 
 // Tablet
-@media (min-width: 426px) and (max-width: 768px) {}
+@media (min-width: 426px) and (max-width: 768px) {
+}
 
 // Small Laptop
-@media (min-width: 769px) and (max-width: 1024px) {}
+@media (min-width: 769px) and (max-width: 1024px) {
+}
 
 // Large Laptop
-@media (min-width: 1025px) and (max-width: 1440px) {}
+@media (min-width: 1025px) and (max-width: 1440px) {
+}
 
 // 4K
-@media (min-width: 1441px) and (max-width: 2560px) {}
+@media (min-width: 1441px) and (max-width: 2560px) {
+}

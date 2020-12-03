@@ -1,74 +1,101 @@
-$englishFont: "RussoOne";
-$arabicFont: "Cairo";
+$boldItalic: "boldItalic";
+$bold: "bold";
+$italic: "italic";
+$regular: "regular";
+$sintony: "Sintony-Regular";
+$myRaid: "MyriadPro-Regular";
+$rufina: "Rufina-Regular";
 
 @font-face {
-  font-family: $englishFont;
-  src: url("assets/fonts/RussoOne.ttf") format("opentype");
+  font-family: $rufina;
+  src: url("assets/fonts/Rufina-Regular.ttf") format("opentype");
+}
+@font-face {
+  font-family: $myRaid;
+  src: url("assets/fonts/MyriadPro-Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: $sintony;
+  src: url("assets/fonts/Sintony-Regular.ttf") format("opentype");
+}
+@font-face {
+  font-family: $boldItalic;
+  src: url("assets/fonts/Corbel Bold Italic.ttf") format("opentype");
 }
 
 @font-face {
-  font-family: $arabicFont;
-  src: url("assets/fonts/Cairo-Regular.ttf") format("opentype");
+  font-family: $bold;
+  src: url("assets/fonts/Corbel Bold.ttf") format("opentype");
 }
 
-.font-english {
-  font-family: $englishFont;
+@font-face {
+  font-family: $italic;
+  src: url("assets/fonts/Corbel Italic.ttf") format("opentype");
 }
 
-.font-arabic {
-  font-family: $arabicFont;
+@font-face {
+  font-family: $regular;
+  src: url("assets/fonts/CORBEL.TTF") format("opentype");
 }
 
-main:lang(en),
-header:lang(en),
-footer:lang(en) {
-  font-family: $englishFont;
-  text-align: left !important;
+// .font-english {
+//   font-family: $regular;
+// }
 
-  .mx-trans-1 {
-    margin-right: 0.25rem !important;
-  }
+// .font-arabic {
+//   font-family: $regular;
+// }
 
-  .mx-trans-2 {
-    margin-right: 0.5rem !important;
-  }
+// main:lang(en),
+// header:lang(en),
+// footer:lang(en) {
+//   font-family: $regular;
+//   text-align: left !important;
 
-  .mx-trans-3 {
-    margin-right: 1rem !important;
-  }
+//   .mx-trans-1 {
+//     margin-right: 0.25rem !important;
+//   }
 
-  .mx-trans-4 {
-    margin-right: 1.5rem !important;
-  }
+//   .mx-trans-2 {
+//     margin-right: 0.5rem !important;
+//   }
 
-  .mx-trans-3 {
-    margin-right: 3rem !important;
-  }
-}
+//   .mx-trans-3 {
+//     margin-right: 1rem !important;
+//   }
 
-main:lang(ar),
-header:lang(ar),
-footer:lang(ar) {
-  font-family: $arabicFont;
-  text-align: right !important;
+//   .mx-trans-4 {
+//     margin-right: 1.5rem !important;
+//   }
 
-  .mx-trans-1 {
-    margin-left: 0.25rem !important;
-  }
+//   .mx-trans-3 {
+//     margin-right: 3rem !important;
+//   }
+// }
 
-  .mx-trans-2 {
-    margin-left: 0.5rem !important;
-  }
+// main:lang(ar),
+// header:lang(ar),
+// footer:lang(ar) {
+//   font-family: $regular;
+//   text-align: right !important;
 
-  .mx-trans-3 {
-    margin-left: 1rem !important;
-  }
+//   .mx-trans-1 {
+//     margin-left: 0.25rem !important;
+//   }
 
-  .mx-trans-4 {
-    margin-left: 1.5rem !important;
-  }
+//   .mx-trans-2 {
+//     margin-left: 0.5rem !important;
+//   }
 
-  .mx-trans-3 {
-    margin-left: 3rem !important;
-  }
-}
+//   .mx-trans-3 {
+//     margin-left: 1rem !important;
+//   }
+
+//   .mx-trans-4 {
+//     margin-left: 1.5rem !important;
+//   }
+
+//   .mx-trans-3 {
+//     margin-left: 3rem !important;
+//   }
+// }

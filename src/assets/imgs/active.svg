@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="26.013" height="26.248" viewBox="0 0 26.013 26.248">
+  <defs>
+    <filter id="Rectangle_5" x="0" y="0" width="26.013" height="26.248" filterUnits="userSpaceOnUse">
+      <feOffset dy="2" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feFlood flood-color="#aeaeae" flood-opacity="0.529"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Rectangle_5_copy_4" x="1.608" y="1.643" width="22.797" height="22.963" filterUnits="userSpaceOnUse">
+      <feOffset dy="2" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="2.5" result="blur-2"/>
+      <feFlood flood-color="#aeaeae" flood-opacity="0.529"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="active" transform="translate(-1436.493 -324.376)">
+    <g transform="matrix(1, 0, 0, 1, 1436.49, 324.38)" filter="url(#Rectangle_5)">
+      <path id="Rectangle_5-2" data-name="Rectangle 5" d="M1314.5,333.876l5.507,5.624-5.507,5.624-5.507-5.624Z" transform="translate(-1301.49 -328.38)" fill="#fff"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 1436.49, 324.38)" filter="url(#Rectangle_5_copy_4)">
+      <path id="Rectangle_5_copy_4-2" data-name="Rectangle 5 copy 4" d="M1314.5,335.519l3.9,3.981-3.9,3.982-3.9-3.982Z" transform="translate(-1301.49 -328.38)" fill="#de9c68"/>
+    </g>
+  </g>
+</svg>
