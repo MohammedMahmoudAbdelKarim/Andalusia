@@ -8,7 +8,6 @@ import { DataShareService } from "src/app/shared/services/dataShare.service";
 @Component({
   selector: "app-counters",
   templateUrl: "./counters.component.html",
-  styleUrls: ["./counters.component.scss"],
 })
 export class CountersComponent implements OnInit {
   count = {

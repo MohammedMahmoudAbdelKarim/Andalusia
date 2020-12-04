@@ -1,0 +1,17 @@
+<section id="partners" class="py-5">
+  <h3
+    class="theme-header-white-underline text-center wow fadeInDown"
+    data-wow-delay=".5s"
+    [translate]="'PARTNERS.PARTNERS'"
+  ></h3>
+  <div
+    class="row partners px-5 no-gutters w-100 align-items-center justify-content-center"
+  >
+    <div
+      class="col-lg col-md-3 mt-lg-0 mt-5 col-sm-4 col-xs-6 mx-5 d-flex justify-content-center"
+      *ngFor="let img of [1, 2, 3, 4, 5]"
+    >
+      <img src="../../../../assets/imgs/p{{ img }}.png" alt="Partner" />
+    </div>
+  </div>
+</section>

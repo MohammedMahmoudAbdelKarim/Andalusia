@@ -1,3 +1,4 @@
+import { CookieService } from "ngx-cookie-service";
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 
@@ -5,15 +6,12 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { SharedModule } from "./shared/shared.module";
-import { AuthGuard } from "./shared/guards/auth.guard";
 import { HttpClientModule, HttpClient } from "@angular/common/http";
 import { ToastrModule } from "ngx-toastr";
 import { TranslateModule, TranslateLoader } from "@ngx-translate/core";
 import { TranslateHttpLoader } from "@ngx-translate/http-loader";
 import { LottieModule } from "ngx-lottie";
 import player from "lottie-web";
-import { APIsService } from "./shared/services/apis.service";
-import { interceptorProviders } from "./shared/interceptors/interceptorProviders";
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, "./assets/i18n/", ".json");
@@ -48,7 +46,7 @@ export function playerFactory() {
     }),
     LottieModule.forRoot({ player: playerFactory }),
   ],
-  providers: [AuthGuard, APIsService, interceptorProviders],
+  providers: [CookieService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

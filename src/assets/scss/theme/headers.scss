@@ -7,11 +7,28 @@
     content: url("./assets/imgs/line.svg");
     display: block;
     height: 0;
-    margin-top: -22px;
   }
 }
 
-.theme-header {
-  font-size: calc(100% + 2vw + 0vh);
+.theme-header-white-underline {
+  font-size: calc(100% + 2vw + 1vh);
   color: $white;
+  font-weight: 900;
+
+  &::after {
+    content: url("./assets/imgs/white-line.svg");
+    display: block;
+    height: 0;
+  }
+}
+.theme-header-black-underline {
+  font-size: calc(100% + 2vw + 1vh);
+  color: #101010;
+  font-weight: 900;
+
+  &::after {
+    content: url("./assets/imgs/black-line.svg");
+    display: block;
+    height: 0;
+  }
 }

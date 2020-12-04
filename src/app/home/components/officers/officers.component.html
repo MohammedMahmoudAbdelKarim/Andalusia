@@ -1,0 +1,63 @@
+<section class="container py-5">
+  <h3
+    class="theme-header-black-underline text-center wow fadeInDown"
+    data-wow-delay=".5s"
+    [translate]="'OFFICERS.EX'"
+  ></h3>
+  <div class="row w-100 align-items-top executive">
+    <div class="col-md-6 wow fadeInDown" data-wow-delay=".5s">
+      <div class="card-news w-100 wow fadeIn m-auto" *ngIf="selectedOfficer">
+        <img
+          class="card-img-top"
+          [src]="selectedOfficer.img"
+          [alt]="selectedOfficer.name"
+        />
+        <!-- Title -->
+        <div class="card-title p-3 mb-0">
+          <h5 class="mb-0 mt-3 font-weight-bold">
+            {{ selectedOfficer.name }}
+          </h5>
+          <span class="d-block mt-2 title">{{ selectedOfficer.title }}</span>
+        </div>
+        <!-- Body -->
+        <div class="card-body p-3">
+          <ul class="list-unstyled">
+            <li class="mb-2 d-flex">
+              <!-- text -->
+              <span class="d-block" [translate]="'NEWS.PHARAGRAPH'"></span>
+            </li>
+          </ul>
+          <div class="d-flex align-items-center links">
+            <div class="mx-2">
+              <i class="fab fa-facebook-f"></i>
+            </div>
+            <div class="mx-2">
+              <i class="fab fa-twitter"></i>
+            </div>
+            <div class="mx-2">
+              <i class="fab fa-linkedin"></i>
+            </div>
+            <div class="mx-2">
+              <i class="fab fa-pinterest"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="row w-100 Ex-officers">
+        <div
+          class="col-6 text-center"
+          *ngFor="let officer of officers; let i = index"
+          (click)="selectOfficerfunction(officer)"
+        >
+          <img [src]="officer.img" [alt]="officer.name" class="img-fluid" />
+          <h6 class="mt-2 mb-3">
+            {{ officer.name }}
+          </h6>
+          <p *ngIf="officer.title" class="title">{{ officer.title }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

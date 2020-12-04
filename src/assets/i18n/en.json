@@ -29,26 +29,8 @@
     "SUBSCRIBE_NOW": "SUBSCRIBE NOW",
     "COPY_RIGHTS": "COPYRIGHT © 2018 - ANDALUSIA GROUP"
   },
-  "FORM": {
-    "NAME": "Your Name",
-    "TITLE": "Title",
-    "MESSAGE": "Type your message here...",
-    "SELECT_REASON": "Choose Reason",
-    "SUBMIT": "Submit",
-    "FORGET_PASSWORD": "Forgot Password?",
-    "LOGIN": "Login",
-    "NO_ACCOUT": "Don't have an account?",
-    "EMAIL": "Enter your email",
-    "PASSWORD": "Password",
-    "CONFIRM_PASSWORD": "Confirm Password",
-    "OLD_PASSWORD": "Old Password",
-
-    "PHONE": "Phone Number",
-    "AGREE": "I agree that i've carefully read the",
-    "TERMS": "Terms and Conditions",
-    "HAVE_ACCOUNT": "Already have an account ?",
-    "CREATE_ACCOUNT": "Create Account",
-    "RESET_PASSWORD": "Reset Password"
+  "OFFICERS": {
+    "EX": "Executives Officers"
   },
   "CART": {
     "EMPTY": "Your Cart is Empty",
@@ -78,19 +60,22 @@
     "EMAIL": "Email :",
     "PHONE": "Phone :"
   },
-  "COUNTERS": {
-    "USERS": "Users",
-    "DOWNLOADS": "Downloads",
-    "GAMES": "Games"
+  "STATISTICS": {
+    "STATISTICS": "STATISTICS",
+    "SITES": "Sites",
+    "STAFF": "Qualified Staff",
+    "MACHIENES": "Machienes",
+    "CLIENTS": "Clients Serviced"
   },
-  "DOWNLOADAPP": {
-    "DOWNLOADAPP": "Download App",
-    "DOWNLOAD_DETAILS": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis itaque, harum in totam porro et.",
-    "DOWNLOADNOW": "Download Now"
+  "PARTNERS": {
+    "PARTNERS": "GREAT PARTNERS"
   },
-  "PRODUCTS": {
-    "OUR_PRODUCTS": "Our Products",
-    "ADD_CART": "Add to Cart"
+  "NEWS": {
+    "RECENT_NEWS": "RECENT NEWS",
+    "TITLE": "How to Improve Your Sales Volume",
+    "DATE": "23 AUG, 2018",
+    "PHARAGRAPH": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas autem quae tempore voluptatum quos, nostrum sint nisi corporis praesentium possimus quisquam omnis laudantium ullam nobis earum perspiciatis voluptatem eos qui.",
+    "READ_MORE": "Read more"
   },
   "ORDER_HISTORY": {
     "ORDER_ID": "Order Id",

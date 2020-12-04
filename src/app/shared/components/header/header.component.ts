@@ -2,7 +2,6 @@ import { Router } from "@angular/router";
 import { Component, OnInit, ViewChild, ElementRef } from "@angular/core";
 import { DataShareService } from "../../services/dataShare.service";
 import { Observable } from "rxjs";
-import { Product } from "./../../interfaces/productInterface";
 import { Locale } from "./../../interfaces/localeInterface";
 
 @Component({
@@ -14,19 +13,12 @@ export class HeaderComponent implements OnInit {
   @ViewChild("mobileMenu", { static: true }) mobileMenu: ElementRef;
   @ViewChild("mobileContainer", { static: true }) mobileContainer: ElementRef;
   navClosed = true;
-  user$: Observable<any> = this.dataShare.user$;
-  addedToCart$: Observable<Product[]> = this.getCartProducts();
-  cartQuantity$: Observable<number> = this.dataShare.cartQuantity$;
   language = "en";
   langBtn: string;
   constructor(private dataShare: DataShareService, private router: Router) {}
 
   ngOnInit() {
     this.displayLangBtn();
-  }
-
-  getCartProducts() {
-    return this.dataShare.cartProducts$;
   }
 
   toggleMenu() {
@@ -43,12 +35,6 @@ export class HeaderComponent implements OnInit {
     this.navClosed = true;
     this.mobileMenu.nativeElement.style.transform = "translateX(-250px)";
     this.mobileContainer.nativeElement.style.right = "100%";
-  }
-
-  /* --------------------- Logout ----------------------- */
-  logout() {
-    this.dataShare.removeUser();
-    this.router.navigateByUrl("/auth/login");
   }
 
   displayLangBtn() {

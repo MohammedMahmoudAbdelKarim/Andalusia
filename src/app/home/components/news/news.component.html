@@ -1,0 +1,48 @@
+<section class="container py-5">
+  <h3
+    class="theme-underline-header text-center wow fadeInDown"
+    data-wow-delay=".5s"
+    [translate]="'NEWS.RECENT_NEWS'"
+  ></h3>
+  <div class="carousel-items">
+    <owl-carousel class="mt-5" [options]="carouselOptions">
+      <div *ngFor="let news of [1, 2, 3, 4, 5, 6]; let i = index">
+        <div class="mt-5 mx-2 wow fadeInDown" data-wow-delay=".5s">
+          <div class="card-news w-100 m-auto">
+            <img
+              class="card-img-top"
+              src="../../../../assets/imgs/{{ i + 1 }}.png"
+              alt=""
+            />
+            <!-- Title -->
+            <div class="card-title p-3 mb-0">
+              <h5
+                class="mb-0 mt-3 font-weight-bold"
+                [translate]="'NEWS.TITLE'"
+              ></h5>
+              <span class="d-block mt-2" [translate]="'NEWS.DATE'"></span>
+            </div>
+            <!-- Body -->
+            <div class="card-body p-3">
+              <ul class="list-unstyled">
+                <li class="mb-2 d-flex">
+                  <!-- text -->
+                  <span class="d-block" [translate]="'NEWS.PHARAGRAPH'"></span>
+                </li>
+              </ul>
+              <button class="mt-3 px-4 py-2" dir="{{ direction$ | async }}">
+                <span class="font-weight-bold text-uppercase text-dark">
+                  <span
+                    class="mx-trans-2 text-white"
+                    [translate]="'NEWS.READ_MORE'"
+                    >Read more</span
+                  >
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </owl-carousel>
+  </div>
+</section>

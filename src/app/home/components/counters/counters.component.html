@@ -1,49 +1,83 @@
-<div class="text-center py-5" dir="{{ direction$ | async }}">
-  <!-- Section Header -->
-  <!-- <h3 class="display-4 mb-4 font-weight-bold wow fadeInDown">
-    Zero Gaming By Numbers
-  </h3> -->
-
+<section class="text-center" dir="{{ direction$ | async }}">
   <!-- Counters -->
-  <div class="p-5 mt-5 counters text-center">
-    <div class="row" id="counter">
-      <!-- Users -->
-      <div class="col-md-4 wow fadeInDown" data-wow-delay=".5s">
+  <div class="p-5 counters text-center">
+    <h3
+      class="theme-underline-header text-white text-center wow fadeInDown"
+      data-wow-delay=".5s"
+      [translate]="'STATISTICS.STATISTICS'"
+    ></h3>
+    <div class="row mt-4 text-white" id="counter">
+      <!-- Sites -->
+      <div class="col-md-3 wow fadeInDown" data-wow-delay=".5s">
+        <div class="container-icon">
+          <i class="fas fa-map-marker-alt"></i>
+        </div>
+        <p class="counter-value mt-2 text-white" data-count="126">0</p>
         <h5
-          class="text-dark font-weight-bold text-uppercase"
-          [translate]="'COUNTERS.USERS'"
+          class="text-white font-weight-normal"
+          [translate]="'STATISTICS.SITES'"
         >
-          Users
+          Sites
         </h5>
-        <i class="fa fa-users text-dark fa-2x"></i>
+      </div>
+      <!-- Qualified Staff -->
+      <div
+        class="col-md-3 mt-lg-0 mt-md-0 mt-4 wow fadeInDown"
+        data-wow-delay=".5s"
+      >
+        <div class="container-icon">
+          <i class="fas fa-user-friends"></i>
+        </div>
+        <p class="counter-value mt-2 text-white" data-count="61473">0</p>
+        <h5
+          class="text-white font-weight-normal"
+          [translate]="'STATISTICS.STAFF'"
+        >
+          Qualified Staff
+        </h5>
+      </div>
+      <!-- Machienes -->
+      <div
+        class="col-md-3 mt-lg-0 mt-md-0 mt-4 wow fadeInDown"
+        data-wow-delay=".5s"
+      >
+        <div class="container-icon">
+          <i class="fas fa-cog"></i>
+        </div>
         <p
-          class="counter-value text-dark mt-2 font-weight-bold display-4"
-          data-count="30"
+          class="counter-value mt-2 text-white font-weight-bolder"
+          data-count="5140"
         >
           0
         </p>
-      </div>
-      <!-- Downloads -->
-      <div class="col-md-4 wow fadeInDown mt-4 mt-md-0" data-wow-delay=".5s">
-        <h5 class="text-dark font-weight-bold text-uppercase" [translate]="'COUNTERS.DOWNLOADS'">
-          Dowloads
+        <h5
+          class="text-white font-weight-normal"
+          [translate]="'STATISTICS.MACHIENES'"
+        >
+          Machienes
         </h5>
-        <i class="fa fa-download fa-2x text-dark"></i>
-        <p class="counter-value text-dark mt-2 display-4" data-count="80">0</p>
       </div>
-      <!-- Games -->
-      <div class="col-md-4 wow fadeInDown mt-4 mt-md-0" data-wow-delay=".5s">
-        <h5 class="text-dark font-weight-bold text-uppercase" [translate]="'COUNTERS.GAMES'">
-          Games
-        </h5>
-        <i class="fa fa-gamepad fa-2x text-dark"></i>
+      <!-- Clients Serviced -->
+      <div
+        class="col-md-3 mt-lg-0 mt-md-0 mt-4 wow fadeInDown"
+        data-wow-delay=".5s"
+      >
+        <div class="container-icon">
+          <i class="fas fa-walking"></i>
+        </div>
         <p
-          class="counter-value text-dark mt-2 font-weight-bold display-4"
-          data-count="70"
+          class="counter-value mt-2 text-white font-weight-bolder"
+          data-count="321570"
         >
           0
         </p>
+        <h5
+          class="text-white font-weight-normal"
+          [translate]="'STATISTICS.CLIENTS'"
+        >
+          Clients Serviced
+        </h5>
       </div>
     </div>
   </div>
-</div>
+</section>
