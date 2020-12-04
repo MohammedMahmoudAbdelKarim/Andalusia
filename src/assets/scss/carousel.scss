@@ -1,9 +1,11 @@
 #carousel {
   .text {
     padding: 24vh 3vw;
+    z-index: 999;
 
     h2 {
       color: #e44b37;
+      font-size: 2.5rem;
     }
     p {
       color: #848484;
@@ -13,32 +15,35 @@
 
   .slide {
     background-image: url("./assets/imgs/header-bg.svg");
-    // height: 114vh;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: 100%;
     button {
       border-radius: 10px;
       background: linear-gradient(#ca3423 0%, #eb6b3d 100%);
       box-shadow: 0px 2px 5px rgba(211, 54, 33, 0.53);
       padding: 10px 50px;
       font-size: 1.4rem;
+      transition: all 1s ease-in-out;
+      &:hover {
+        background: linear-gradient(#eb6b3d 0%, #ca3423 100%);
+      }
     }
   }
 }
 .carousel-control-prev,
 .carousel-control-next {
-  width: 1%;
+  width: 3%;
   opacity: 1;
 }
 
 .carousel-control-next {
-  top: -42%;
-  right: 55px;
+  top: -338px;
+  right: 31px;
 }
 .carousel-control-prev {
   left: unset;
-  right: 55px;
+  right: 31px;
+  top: 200px;
 }
 .carousel-control-next-icon {
   background: url("./assets/imgs/next.svg");
@@ -57,9 +62,6 @@
   top: 30%;
   li {
     border: 0;
-    // width: 25px;
-    // height: 25px;
-    // clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
     background: url("./assets/imgs/diamon.svg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -78,7 +80,6 @@
 }
 @media (min-width: 320px) and (max-width: 425px) {
   .slide {
-    // background-position: left !important;
     background-position: center !important;
   }
 }
@@ -86,14 +87,13 @@
 // Tablet
 @media (min-width: 426px) and (max-width: 768px) {
   .slide {
-    background-position: center !important;
+    background-position: left !important;
   }
 }
 
 // Small Laptop
 @media (min-width: 769px) and (max-width: 1024px) {
   .slide {
-    // background-position: left !important;
     background-position: center !important;
   }
 }

@@ -44,10 +44,11 @@
         </div>
       </div>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-6 wow fadeInDown" data-wow-delay=".5s">
       <div class="row w-100 Ex-officers">
         <div
-          class="col-6 text-center"
+          class="col-6 text-center wow officer fadeInDown"
+          data-wow-delay=".5s"
           *ngFor="let officer of officers; let i = index"
           (click)="selectOfficerfunction(officer)"
         >

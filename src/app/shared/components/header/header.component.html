@@ -1,5 +1,6 @@
 <nav
   id="mainHeader"
+  dir="{{ direction$ | async }}"
   class="navbar navbar-expand-lg navbar-dark sticky-top wow fadeIn"
 >
   <!-- Brand -->
@@ -15,9 +16,11 @@
     <ul class="navbar-nav ml-auto d-flex align-items-center">
       <!-- Nav Items -->
       <li class="nav-item" routerLinkActive="active">
-        <a class="nav-link" [routerLink]="['/home']" [translate]="'HEADER.HOME'"
-          >Home</a
-        >
+        <a
+          class="nav-link"
+          [routerLink]="['/home']"
+          [translate]="'HEADER.HOME'"
+        ></a>
       </li>
       <li class="nav-item dropdown">
         <a
@@ -28,59 +31,61 @@
           data-toggle="dropdown"
           aria-haspopup="true"
           aria-expanded="false"
+          [translate]="'HEADER.ABOUT_US'"
         >
-          About us
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Our Company</a>
+          <a class="dropdown-item" href="#" [translate]="'HEADER.OUR_COM'"></a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Partners & Accreditations</a>
+          <a class="dropdown-item" href="#" [translate]="'HEADER.PART'"></a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Corporate Structure</a>
+          <a class="dropdown-item" href="#" [translate]="'HEADER.STR'"></a>
         </div>
       </li>
       <li class="nav-item" routerLinkActive="active">
-        <a class="nav-link">Business Units</a>
+        <a class="nav-link" [translate]="'HEADER.BU'"></a>
       </li>
       <li class="nav-item" routerLinkActive="active">
-        <a class="nav-link">Projects</a>
+        <a class="nav-link" [translate]="'HEADER.PROJECTS'"></a>
       </li>
       <li class="nav-item" routerLinkActive="active">
-        <a class="nav-link">Partners</a>
+        <a class="nav-link" [translate]="'HEADER.PARTNER'"></a>
       </li>
       <li class="nav-item" routerLinkActive="active">
-        <a class="nav-link">Media & Events</a>
+        <a class="nav-link" [translate]="'HEADER.MEDIA'"></a>
       </li>
       <li class="nav-item" routerLinkActive="active">
-        <a class="nav-link">Contacts</a>
+        <a class="nav-link" [translate]="'HEADER.CONTACT'"></a>
       </li>
 
       <li class="nav-item" routerLinkActive="active">
-        <a class="nav-link">Careers</a>
+        <a class="nav-link" [translate]="'HEADER.CAREER'"></a>
       </li>
 
-      <li class="nav-icon" routerLinkActive="icon-active">
+      <li
+        class="nav-icon"
+        routerLinkActive="icon-active"
+        (click)="search = !search"
+      >
         <a><i class="fas fa-search fa-2x p-2"></i> </a>
+      </li>
+      <li class="nav-input" routerLinkActive="icon-active" *ngIf="search">
+        <input type="search" name="" id="" class="form-control" />
       </li>
 
       <!-- Language -->
-      <li class="language">
-        <button
-          mat-icon-button
-          [matMenuTriggerFor]="menu"
-          aria-label="Example icon-button with a menu"
-        >
-          <img src="../../../../assets/imgs/eng.svg" alt="english" />
-        </button>
-        <mat-menu #menu="matMenu">
-          <button mat-menu-item>
-            <img
-              src="../../../../assets/imgs/ar.png"
-              alt="arabic"
-              class="img-fluid"
-            />
-          </button>
-        </mat-menu>
+      <li class="language" (click)="changeLang()">
+        <img
+          src="../../../../assets/imgs/eng.svg"
+          alt="english"
+          *ngIf="langBtn != 'en'"
+        />
+        <img
+          src="../../../../assets/imgs/ar.png"
+          alt="arabic"
+          width="42px"
+          *ngIf="langBtn == 'en'"
+        />
       </li>
     </ul>
   </div>
@@ -108,18 +113,17 @@
             routerLinkActive="active"
             [routerLink]="['/home']"
           >
-            <i class="fas fa-home mr-3 fa-2x"></i>
+            <i class="fas fa-home mx-3 fa-2x"></i>
             <a
               class="responsive-link d-inline-block"
               [translate]="'HEADER.HOME'"
-              >Home</a
-            >
+            ></a>
           </li>
           <!-- About Us -->
           <li
             class="responsive-item my-3 bg-transparent d-flex align-items-center justify-content-start dropdown"
           >
-            <i class="fas fa-info-circle mr-3 fa-2x"></i>
+            <i class="fas fa-info-circle mx-3 fa-2x"></i>
             <a
               class="nav-link dropdown-toggle"
               href="#"
@@ -128,51 +132,62 @@
               data-toggle="dropdown"
               aria-haspopup="true"
               aria-expanded="false"
+              [translate]="'HEADER.ABOUT_US'"
             >
-              About us
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Our Company</a>
+              <a
+                class="dropdown-item"
+                href="#"
+                [translate]="'HEADER.OUR_COM'"
+              ></a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Partners & Accreditations</a>
+              <a class="dropdown-item" href="#" [translate]="'HEADER.PART'"></a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Corporate Structure</a>
+              <a class="dropdown-item" href="#" [translate]="'HEADER.STR'"></a>
             </div>
           </li>
           <li
             class="responsive-item my-3 d-flex align-items-center justify-content-start"
             routerLinkActive="active"
           >
-            <i class="fas fa-briefcase mr-3 fa-2x"></i>
-            <a class="nav-link">Business Units</a>
+            <i class="fas fa-briefcase mx-3 fa-2x"></i>
+            <a class="nav-link" [translate]="'HEADER.BU'"></a>
           </li>
           <li
             class="responsive-item my-3 d-flex align-items-center justify-content-start"
             routerLinkActive="active"
           >
-            <i class="fas fa-project-diagram mr-3 fa-2x"></i>
-            <a class="nav-link">Projects</a>
+            <i class="fas fa-project-diagram mx-3 fa-2x"></i>
+            <a class="nav-link" [translate]="'HEADER.PROJECTS'"></a>
           </li>
           <li
             class="responsive-item my-3 d-flex align-items-center justify-content-start"
             routerLinkActive="active"
           >
-            <i class="fas fa-handshake mr-3 fa-2x"></i>
-            <a class="nav-link">Partners</a>
+            <i class="fas fa-handshake mx-3 fa-2x"></i>
+            <a class="nav-link" [translate]="'HEADER.PARTNER'"></a>
           </li>
           <li
             class="responsive-item my-3 d-flex align-items-center justify-content-start"
             routerLinkActive="active"
           >
-            <i class="fas fa-calendar-week mr-3 fa-2x"></i>
-            <a class="nav-link">Media & Events</a>
+            <i class="fas fa-calendar-week mx-3 fa-2x"></i>
+            <a class="nav-link" [translate]="'HEADER.MEDIA'"></a>
           </li>
           <li
             class="responsive-item my-3 d-flex align-items-center justify-content-start"
             routerLinkActive="active"
           >
-            <i class="fas fa-envelope mr-3 fa-2x"></i>
-            <a class="nav-link">Contacts</a>
+            <i class="fas fa-envelope mx-3 fa-2x"></i>
+            <a class="nav-link" [translate]="'HEADER.CONTACT'"></a>
+          </li>
+          <li
+            class="responsive-item my-3 d-flex align-items-center justify-content-start"
+            routerLinkActive="active"
+          >
+            <i class="fas fa-briefcase mx-3 fa-2x"></i>
+            <a class="nav-link" [translate]="'HEADER.CAREER'"></a>
           </li>
           <li>
             <div (click)="changeLang()" class="lang-btn-mob my-3">

@@ -23,18 +23,12 @@
 
   // Navigation Menu
   .nav-item {
-    // padding: 0.3rem 2rem;
-    padding: 25px 16px;
+    padding: 25px 13px;
     margin: 0 0.4rem;
     display: flex;
     align-items: center;
-
-    // transform: skewX(-20deg);
     cursor: pointer;
-
     &:hover {
-      // background-image: $secondary-gradient-right;
-
       a {
         color: $hover;
         font-weight: 500;
@@ -43,7 +37,7 @@
 
     a {
       color: $dark;
-      font-size: 1rem;
+      font-size: 0.9rem;
       padding: 0;
     }
   }
@@ -89,7 +83,7 @@
   .active {
     a {
       color: $hover;
-      font-family: $bold;
+      // font-family: $bold;
     }
   }
 
@@ -98,10 +92,8 @@
   }
 
   .language {
-    button {
-      outline: 0;
-      border: 0;
-      background: $white;
+    img {
+      cursor: pointer;
     }
   }
 
@@ -229,4 +221,20 @@
 .dropdown-menu {
   min-width: 100%;
   border-radius: 0;
+}
+.dropdown-toggle::after {
+  display: none;
+}
+header:lang(ar) {
+  .dropdown-menu {
+    text-align: right;
+  }
+}
+.nav-input {
+  input {
+    font-size: 0.8rem;
+    height: 28px;
+    padding: 10px;
+    border-radius: 0;
+  }
 }

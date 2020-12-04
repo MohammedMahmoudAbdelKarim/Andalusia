@@ -3,20 +3,24 @@ import { Component, OnInit, ViewChild, ElementRef } from "@angular/core";
 import { DataShareService } from "../../services/dataShare.service";
 import { Observable } from "rxjs";
 import { Locale } from "./../../interfaces/localeInterface";
+import { map } from "rxjs/operators";
 
 @Component({
   selector: "app-header",
   templateUrl: "./header.component.html",
-  styleUrls: ["./header.component.scss"],
 })
 export class HeaderComponent implements OnInit {
   @ViewChild("mobileMenu", { static: true }) mobileMenu: ElementRef;
   @ViewChild("mobileContainer", { static: true }) mobileContainer: ElementRef;
   navClosed = true;
   language = "en";
+  search = false;
   langBtn: string;
   constructor(private dataShare: DataShareService, private router: Router) {}
-
+  // Get Direction
+  direction$: Observable<string> = this.dataShare.locale$.pipe(
+    map((locale: Locale) => locale.dir)
+  );
   ngOnInit() {
     this.displayLangBtn();
   }
@@ -39,7 +43,7 @@ export class HeaderComponent implements OnInit {
 
   displayLangBtn() {
     this.dataShare.locale$.subscribe((locale: Locale) => {
-      this.langBtn = locale.lang === "en" ? "ع" : "en";
+      this.langBtn = locale.lang;
     });
   }
 

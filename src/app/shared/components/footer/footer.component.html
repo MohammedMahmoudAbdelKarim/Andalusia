@@ -1,9 +1,14 @@
 <!-- Start Footer -->
-<footer id="footer" class="container-fluid" dir="{{ direction$ | async }}">
+<footer
+  id="footer"
+  class="container-fluid wow officer fadeInDown"
+  data-wow-delay=".5s"
+  dir="{{ direction$ | async }}"
+>
   <h2 class="text-white" [translate]="'FOOTER.EXPLORE_MORE'"></h2>
   <hr />
   <ul
-    class="list-unstyled mt-5 pt-4 row w-100 no-gutters align-items-top justify-content-between"
+    class="list-unstyled pr-0 mt-5 pt-4 row w-100 no-gutters align-items-top justify-content-between"
   >
     <!-- Start First Section  -->
     <li

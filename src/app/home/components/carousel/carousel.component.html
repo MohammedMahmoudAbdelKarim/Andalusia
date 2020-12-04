@@ -1,62 +1,19 @@
-<div id="carousel">
+<section id="carousel">
   <carousel [isAnimated]="true">
-    <slide>
+    <slide *ngFor="let i of [1, 2, 3]">
       <div class="slide slide1 text-white">
-        <div class="text wow fadeInLef row w-100" data-wow-delay=".5s">
+        <div class="text wow fadeInLeft row w-100" data-wow-delay=".5s">
           <div class="col-md-6">
-            <h2 class="mb-4 font-weight-normal">
-              We are growing fast do you see.
-            </h2>
-            <p>
-              Preserved defective offending he daughters on or. Rejoiced
-              prospect yet material servants out answered men admitted.
-              Sportsmen certainty prevailed suspected am as. Add stairs admire
-              all answer the nearer yet length.
-            </p>
+            <h2
+              class="mb-4 font-weight-normal"
+              [translate]="'CAROUSAL.TITLE'"
+            ></h2>
+            <p [translate]="'CAROUSAL.DATA'"></p>
             <button class="btn mt-3">
-              <span class="mx-trans-2 text-white">Learn more</span>
-            </button>
-          </div>
-          <div class="col-md-6"></div>
-        </div>
-      </div>
-    </slide>
-    <slide>
-      <div class="slide slide1 text-white">
-        <div class="text mx-lg-4 wow fadeInLef row w-100" data-wow-delay=".5s">
-          <div class="col-md-6">
-            <h2 class="mb-4 font-weight-normal">
-              We are growing fast do you see.
-            </h2>
-            <p>
-              Preserved defective offending he daughters on or. Rejoiced
-              prospect yet material servants out answered men admitted.
-              Sportsmen certainty prevailed suspected am as. Add stairs admire
-              all answer the nearer yet length.
-            </p>
-            <button class="btn mt-3">
-              <span class="mx-trans-2 text-white">Learn more</span>
-            </button>
-          </div>
-          <div class="col-md-6"></div>
-        </div>
-      </div>
-    </slide>
-    <slide>
-      <div class="slide slide1 text-white">
-        <div class="text wow fadeInLef row w-100" data-wow-delay=".5s">
-          <div class="col-md-6">
-            <h2 class="mb-4 font-weight-normal">
-              We are growing fast do you see.
-            </h2>
-            <p>
-              Preserved defective offending he daughters on or. Rejoiced
-              prospect yet material servants out answered men admitted.
-              Sportsmen certainty prevailed suspected am as. Add stairs admire
-              all answer the nearer yet length.
-            </p>
-            <button class="btn mt-3">
-              <span class="mx-trans-2 text-white">Learn more</span>
+              <span
+                class="mx-trans-2 carousel-btn text-white"
+                [translate]="'CAROUSAL.LEARN_MORE'"
+              ></span>
             </button>
           </div>
           <div class="col-md-6"></div>
@@ -64,4 +21,4 @@
       </div>
     </slide>
   </carousel>
-</div>
+</section>

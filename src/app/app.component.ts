@@ -22,6 +22,7 @@ export class AppComponent implements OnInit {
   showSplash$: Observable<boolean> = this.dataShare.showSplash$;
 
   ngOnInit() {
+    this.onRouterChange();
     this.dataShare.InitData();
     this.initUserLanguage();
   }

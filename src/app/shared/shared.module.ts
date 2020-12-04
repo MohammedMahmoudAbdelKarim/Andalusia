@@ -3,8 +3,6 @@ import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { FooterComponent } from "./components/footer/footer.component";
 import { HeaderComponent } from "./components/header/header.component";
-import { LoaderComponent } from "./components/loader/loader.component";
-import { TapToTopComponent } from "./components/tapToTop/tapToTop.component";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { SplashComponent } from "./components/splash/splash.component";
 import { ModalModule } from "ngx-bootstrap/modal";
@@ -32,8 +30,6 @@ import { MatDialogModule } from "@angular/material/dialog";
   declarations: [
     FooterComponent,
     HeaderComponent,
-    LoaderComponent,
-    TapToTopComponent,
     SplashComponent,
     ProgressBarComponent,
     NotFoundComponent,
@@ -44,8 +40,6 @@ import { MatDialogModule } from "@angular/material/dialog";
     // components
     FooterComponent,
     HeaderComponent,
-    LoaderComponent,
-    TapToTopComponent,
     SplashComponent,
     ProgressBarComponent,
     NotFoundComponent,
