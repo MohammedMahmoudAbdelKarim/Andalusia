@@ -1,5 +1,5 @@
 {
-  "name": "zero-gaming",
+  "name": "andalusia",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -8,11 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "server": "json-server --watch db.json",
-    "githubpages": "ng build --prod --output-path docs --base-href https://YoussefZidan.github.io/zero-deploy/",
-    "addRemote": "git remote add zero-deploy https://github.com/YoussefZidan/zero-deploy.git",
-    "addUserData": "git config user.name 'Youssef Zidan' && git config user.email 'youssefzidan2200@gmail.com'",
-    "push": "git remote -v && git add docs && git commit -m 'commit from zero-gaming main repo' && git push zero-deploy zero-deploy"
+    "server": "json-server --watch db.json"
   },
   "private": true,
   "dependencies": {
