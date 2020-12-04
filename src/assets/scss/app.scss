@@ -13,9 +13,6 @@
 // Material Theme
 @import "./theme/materialTheme.scss";
 
-// Forms Theme
-@import "./theme/forms.scss";
-
 // Headers Theme
 @import "./theme/headers.scss";
 
@@ -33,6 +30,9 @@
 
 // Officers Component
 @import "./officers.scss";
+
+// Services Component
+@import "./services.scss";
 // Overview component
 @import "./overview.scss";
 
@@ -44,36 +44,6 @@
 
 // Splash
 @import "./splash.scss";
-
-// Login
-@import "./login.scss";
-
-// Register
-@import "./register.scss";
-
-// Cart
-@import "./cart.scss";
-
-// Profile
-@import "./profile.scss";
-
-// About
-@import "./about.scss";
-
-// Contact
-@import "./contact.scss";
-
-// Check Email
-@import "./checkEmail.scss";
-
-// Terms and Conditions
-@import "./termsAndConditions.scss";
-
-// FAQ
-@import "./faq.scss";
-
-// OrdersList
-@import "./ordersList.scss";
 
 // Global Styles
 body {

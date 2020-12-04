@@ -32,33 +32,10 @@
   "OFFICERS": {
     "EX": "Executives Officers"
   },
-  "CART": {
-    "EMPTY": "Your Cart is Empty",
-    "BACK": "Back",
-    "ORDER_DETAILS": "Order Details",
-    "PRODUCT_NAME": "Product Name:",
-    "PRODUCT_QUANTITY": "Product Quantity:",
-    "DISCOUNT": "Discount:",
-    "PRODUCT_PRICE": "Product Price:",
-    "TOTAL_PRODUCT_PRICE": "Total Products Price:",
-    "TOTAL_AMOUNT": "Total Amount",
-    "PLACE_ORDER": "Place Order",
-    "REMOVE": "Remove",
-    "APPLY_COUPON": "Add Coupon ",
-    "HAVE_COUPON": "Do you have a Coupon?"
-  },
-  "PROFILE": {
-    "UPLOAD": "Upload",
-    "NOT_VERIFIED": "Not Verified",
-    "VERIFIED": "Verified",
-    "ORDER_HISTORY": "Order History",
-    "EDIT": "Edit Profile",
-    "CHANGE_PASSWORD": "Change Password",
-    "BUY": "Buy Now",
-    "NO_ORDERS": "No Orders Yet",
-    "SAVE": "Save Changes",
-    "EMAIL": "Email :",
-    "PHONE": "Phone :"
+  "SERVICES": {
+    "OUR_SERVICES": "OUR SERVICES",
+    "ONE_SERVICE": "Service one",
+    "DATA": "Preserved defective offending he daughters on or. Rejoiced prospect yet material servants out answered men admitted. ",
   },
   "STATISTICS": {
     "STATISTICS": "STATISTICS",
@@ -77,14 +54,8 @@
     "PHARAGRAPH": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas autem quae tempore voluptatum quos, nostrum sint nisi corporis praesentium possimus quisquam omnis laudantium ullam nobis earum perspiciatis voluptatem eos qui.",
     "READ_MORE": "Read more"
   },
-  "ORDER_HISTORY": {
-    "ORDER_ID": "Order Id",
-    "DATE": "Date",
-    "PRICE": "Price",
-    "STATUS": "Status",
-    "ACTIONS": "Actions",
-    "NEW": "New",
-    "CANCELED": "Canceled",
-    "VIEW": "View"
+  "OVERVIEW": {
+    "OVERVIEW": "OVERVIEW",
+    "DATA": "Andalusia is one of the leading regional players in the healthcare provision space in the Middle East. With a network of general hospitals, specialized medical centers, and polyclinics across Egypt and Saudi Arabia, Andalusia has built a unique footprint both in service spectrum and geographically. Andalusia Group for Medical Services was founded in 1984 by the entrepreneur Dr. Darweesh Zagzoug as a single hospital in Jeddah, Saudi Arabia; and grown over 30 years to own and manage several healthcare facilities in both Saudi and Egypt. The second generation family owner Dr. Hazem Zagzoug, the current CEO has made it possible for a renowned financial institution like the IFC to join forces to serve more than 7 million patients in the last 10 years with amicable quality, and creating 2000 new jobs. We are proud of our origin, our progress, as well as our partners.",
   }
 }

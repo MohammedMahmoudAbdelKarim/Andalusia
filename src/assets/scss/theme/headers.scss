@@ -21,14 +21,3 @@
     height: 0;
   }
 }
-.theme-header-black-underline {
-  font-size: calc(100% + 2vw + 1vh);
-  color: #101010;
-  font-weight: 900;
-
-  &::after {
-    content: url("./assets/imgs/black-line.svg");
-    display: block;
-    height: 0;
-  }
-}

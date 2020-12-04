@@ -1,0 +1,22 @@
+<section class="text-center" dir="{{ direction$ | async }}">
+  <!-- Services -->
+  <div class="p-5 services text-center">
+    <h3
+      class="theme-underline-header text-center wow fadeInDown"
+      data-wow-delay=".5s"
+      [translate]="'SERVICES.OUR_SERVICES'"
+    ></h3>
+    <div class="row mt-4" id="counter">
+      <div class="col-md-4 text-center" *ngFor="let service of [1,2,3]">
+        <div
+          class="service-container d-flex align-items-center justify-content-center"
+        >
+          <img src="../../../../assets/imgs/s-{{service}}.svg" alt="" />
+        </div>
+        <h4 [translate]="'SERVICES.ONE_SERVICE'"></h4>
+        <p [translate]="'SERVICES.DATA'">
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

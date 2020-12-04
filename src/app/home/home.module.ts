@@ -12,6 +12,7 @@ import { CountToModule } from "angular-count-to";
 import { TranslateModule } from "@ngx-translate/core";
 import { PartnersComponent } from './components/partners/partners.component';
 import { OfficersComponent } from './components/officers/officers.component';
+import { ServicesComponent } from './components/services/services.component';
 
 const routes: Routes = [
   {
@@ -37,6 +38,7 @@ const routes: Routes = [
     CountersComponent,
     PartnersComponent,
     OfficersComponent,
+    ServicesComponent,
   ],
 })
 export class HomeModule {}
