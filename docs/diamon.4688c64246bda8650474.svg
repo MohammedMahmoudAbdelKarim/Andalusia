@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="26.013" height="26.247" viewBox="0 0 26.013 26.247">
+  <defs>
+    <filter id="diamon" x="0" y="0" width="26.013" height="26.247" filterUnits="userSpaceOnUse">
+      <feOffset dy="2" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feFlood flood-color="#aeaeae" flood-opacity="0.529"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#diamon)">
+    <path id="diamon-2" data-name="diamon" d="M1314.5,313.993l5.507,5.624-5.507,5.624-5.507-5.624Z" transform="translate(-1301.49 -308.49)" fill="#fff"/>
+  </g>
+</svg>

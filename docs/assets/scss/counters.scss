@@ -1,0 +1,41 @@
+.counters {
+  background: url("./assets/imgs/stat-bg.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+
+  .container-icon {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    margin: 0 auto 25px auto;
+    background: rgba(247, 84, 110, 0);
+    border: 3px solid #d1d1d1;
+    cursor: pointer;
+    svg {
+      font-size: 2rem;
+      color: $white;
+    }
+    p {
+      font-size: 1.5;
+    }
+    h5 {
+      font-size: 1rem;
+    }
+    &:hover {
+      background: $white;
+      border: 3px solid $white;
+      transition: all 0.3s ease-in-out;
+      svg {
+        color: #ee6e3c;
+      }
+    }
+  }
+  #counter {
+    padding-top: 80px;
+  }
+}

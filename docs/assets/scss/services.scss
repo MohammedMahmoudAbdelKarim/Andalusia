@@ -1,0 +1,26 @@
+.services {
+  background: url("./assets/imgs/services-bg.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  .service-container {
+    width: 110px;
+    height: 110px;
+    background: linear-gradient(#eb6b3d 0%, #f23d5f 100%);
+    border-radius: 50%;
+    margin: 15px auto;
+    box-shadow: 13px 4px #ddc2db;
+    cursor: pointer;
+    &:hover {
+      box-shadow: 13px 4px 44px #ddc2db;
+      img {
+        transform: rotate(360deg);
+        transition: 1s all ease-in-out;
+      }
+    }
+  }
+  #counter {
+    padding-top: 80px;
+  }
+}

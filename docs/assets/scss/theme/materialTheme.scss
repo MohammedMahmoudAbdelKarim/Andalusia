@@ -1,0 +1,80 @@
+@import "~@angular/material/theming";
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+
+$primary-map: (
+  50: $primary,
+  100: $primary,
+  contrast: (
+    50: $dark-primary-text,
+    100: $dark-primary-text,
+    200: $dark-primary-text,
+    300: $dark-primary-text,
+    400: $dark-primary-text,
+    500: $light-primary-text,
+    600: $light-primary-text,
+    700: $light-primary-text,
+    800: $light-primary-text,
+    900: $light-primary-text,
+    A100: $dark-primary-text,
+    A200: $light-primary-text,
+    A400: $light-primary-text,
+    A700: $light-primary-text,
+  ),
+);
+
+$zero-app-primary: mat-palette($primary-map, 50, 100);
+$zero-app-accent: mat-palette($mat-orange, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$zero-app-warn: mat-palette($mat-red);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as `color` or `typography`.
+$zero-app-theme: mat-light-theme(
+  $zero-app-primary,
+  $zero-app-accent,
+  $zero-app-warn
+);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($zero-app-theme);
+
+// Overriding materials calasses
+.mat-paginator,
+.mat-select-arrow,
+.mat-select-value,
+.mat-header-cell,
+.mat-cell,
+.mat-footer-cell {
+  color: $white;
+}
+.mat-icon-button {
+  margin: 0 5px !important;
+}
+
+tr.mat-footer-row,
+tr.mat-row {
+  height: 70px !important;
+}
+
+.mat-tab-header-pagination-chevron {
+  border-color: $secondary !important;
+  padding: 5px;
+}
+.mat-tab-header-pagination-chevron {
+  border-style: solid !important;
+  border-width: 4px 4px 0 0 !important;
+  height: 10px !important;
+  width: 10px !important;
+}

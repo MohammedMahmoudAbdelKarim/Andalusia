@@ -1,0 +1,50 @@
+.carousel-items {
+  margin-top: 45px;
+}
+.card-news {
+  position: relative;
+  box-shadow: 0px 2px 5px rgba(174, 174, 174, 0.45);
+  .card-body {
+    span {
+      border-bottom: 1px solid #e7e7e7;
+      padding-bottom: 16px;
+    }
+  }
+  .links {
+    div {
+      height: 40px;
+      width: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #0a2034;
+      border-radius: 50%;
+      cursor: pointer;
+      svg {
+        color: $white;
+      }
+      &:hover {
+        background: $hover;
+      }
+    }
+  }
+  button {
+    background: #e7643a;
+    border: 0;
+    outline: 0;
+    &:hover {
+      background: #b3441f;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+}
+.title {
+  color: #d74a2e;
+  font-weight: 900;
+}
+.executive {
+  padding-top: 88px;
+}
+.officer {
+  cursor: pointer;
+}

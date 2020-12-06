@@ -1,0 +1,61 @@
+.modal-dialog {
+  height: 100vh;
+}
+.modal-content {
+  height: 100%;
+}
+.modal-backdrop.show {
+  opacity: 1 !important;
+  background-color: $darker;
+}
+
+.modal-content {
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: transparent;
+}
+
+#splash {
+  .splash-img {
+    margin-top: -200px;
+  }
+  // Mobile
+  @media (min-width: 320px) and (max-width: 425px) {
+    .splash-text {
+      margin-top: -40px;
+    }
+  }
+  // Tablet
+  @media (min-width: 426px) and (max-width: 768px) {
+    .splash-text {
+      margin-top: -70px;
+    }
+  }
+
+  // Small Laptop
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .splash-text {
+      margin-top: -220px;
+    }
+  }
+  // Large Laptop
+  @media (min-width: 1025px) and (max-width: 1440px) {
+    .splash-text {
+      margin-top: -250px;
+    }
+  }
+
+  // 4K
+  @media (min-width: 1441px) and (max-width: 2560px) {
+    .splash-text {
+      margin-top: -250px;
+    }
+  }
+
+  .splash-header {
+    font-size: 2em !important;
+  }
+}

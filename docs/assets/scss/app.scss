@@ -1,0 +1,102 @@
+// Variables
+@import "./theme/variables";
+
+// Fonts
+@import "./theme/fonts.scss";
+
+// Bootstrap Theme
+@import "./theme/bootstrapTheme.scss";
+
+// Material Theme
+@import "./theme/materialTheme.scss";
+
+// Headers Theme
+@import "./theme/headers.scss";
+
+// Header Component
+@import "./header.scss";
+
+// Footer Component
+@import "./footer.scss";
+
+// Carousel Component
+@import "./carousel.scss";
+
+// News Component
+@import "./news.scss";
+
+// Officers Component
+@import "./officers.scss";
+
+// Services Component
+@import "./services.scss";
+// Overview component
+@import "./overview.scss";
+
+// Partners component
+@import "./partners.scss";
+
+// Counters
+@import "./counters.scss";
+
+// Splash
+@import "./splash.scss";
+
+// Global Styles
+body {
+  // background-color: $darker;
+  font-size: 14px;
+}
+
+input[type="checkbox"] {
+  background-color: $secondary !important;
+}
+
+ul {
+  list-style: none;
+}
+
+// hiding arrows from number inputs
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+// Header Mat-Menu
+.mat-menu-panel {
+  min-width: 0 !important;
+  max-width: 80px !important;
+  background: #f6f6f6;
+
+  button {
+    outline: 0;
+  }
+}
+
+// JUST FOR REFERENCE
+// Mobile
+@media (min-width: 320px) and (max-width: 425px) {
+}
+
+// Tablet
+@media (min-width: 426px) and (max-width: 768px) {
+}
+
+// Small Laptop
+@media (min-width: 769px) and (max-width: 1024px) {
+}
+
+// Large Laptop
+@media (min-width: 1025px) and (max-width: 1440px) {
+}
+
+// 4K
+@media (min-width: 1441px) and (max-width: 2560px) {
+}

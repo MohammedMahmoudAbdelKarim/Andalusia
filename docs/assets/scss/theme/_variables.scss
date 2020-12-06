@@ -1,0 +1,19 @@
+// Theme Colors
+$primary: #6496b7;
+$primary2: #3d6781;
+$secondary: #f9da6e;
+$secondary2: #edab61;
+$dark: #575757;
+$hover: #e44b37;
+$darker: #172029;
+$gray: #aeb0ab;
+$disabled1: #d1d5d8;
+$disabled2: #ddd;
+
+$secondary-gradient-right: linear-gradient(to right, $secondary, $secondary2);
+$secondary-gradient-left: linear-gradient(to left, $secondary, $secondary2);
+$secondary-gradient-top: linear-gradient(to top, $secondary, $secondary2);
+$primary-gradient-right: linear-gradient(to right, $primary2, $primary);
+$primary-gradient-left: linear-gradient(to left, $primary2, $primary);
+$diabled-gradient-left: linear-gradient(to left, $primary, $primary2);
+$diabled-gradient-right: linear-gradient(to right, $disabled1, $disabled2);
