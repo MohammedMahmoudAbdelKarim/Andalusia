@@ -12,7 +12,7 @@ export class SplashComponent implements OnInit {
   @ViewChild("splash", { static: true }) splash;
 
   options: AnimationOptions = {
-    path: "assets/animations/logo.json",
+    path: "https://assets9.lottiefiles.com/private_files/lf30_oGbdoA.json",
   };
 
   constructor(private modalService: BsModalService) {}
