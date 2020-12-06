@@ -13,7 +13,10 @@
   </a>
   <!-- Desktop Menu -->
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav ml-auto d-flex align-items-center">
+    <ul
+      class="navbar-nav d-flex align-items-center"
+      [ngClass]="langBtn == 'en' ? 'ml-auto' : 'mr-auto'"
+    >
       <!-- Nav Items -->
       <li class="nav-item" routerLinkActive="active">
         <a
@@ -192,7 +195,17 @@
           <li>
             <div (click)="changeLang()" class="lang-btn-mob my-3">
               <!-- {{ langBtn === "ع" ? "العربية" : "English" }} -->
-              <img src="../../../../assets/imgs/eng.svg" alt="" />
+              <img
+                src="../../../../assets/imgs/eng.svg"
+                alt=""
+                *ngIf="langBtn != 'en'"
+              />
+              <img
+                src="../../../../assets/imgs/ar.png"
+                alt="arabic"
+                width="42px"
+                *ngIf="langBtn == 'en'"
+              />
             </div>
           </li>
         </ul>
